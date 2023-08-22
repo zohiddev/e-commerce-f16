@@ -1,13 +1,14 @@
-import { useState } from 'react'
-import './App.css'
+import Header from "./layout/Header"
+import Link__images from "./layout/Main/Link__images"
 
 function App() {
 
 
   return (
-    <>
-  <div className="nedelayeto"></div>
-    </>
+    <div className="wrapper">
+      <Header />
+      <Link__images/>
+    </div>
   )
 }
 
