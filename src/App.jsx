@@ -1,13 +1,13 @@
-import Header from "./layout/Header"
+import { useState } from 'react'
+import './App.css'
 
 function App() {
 
+
   return (
-    <div className="wrapper">
-      <Header />
-
-
-    </div>
+    <>
+  <div className="nedelayeto"></div>
+    </>
   )
 }
 
