@@ -51,7 +51,12 @@ const Header = () => {
                                 <ProfileIcon />
                             </span>
                             <span>Kirish</span>
+                            
                         </button>
+                        <div className="login_popup">
+                            <div className="login_popup-title">Tizimga kirish yoki profil yaratish</div>
+                        
+                        </div>
                     </div>
                 </div>
             </div>
