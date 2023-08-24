@@ -19,11 +19,13 @@ import BuildingMaterialsProducts from "./layout/Main/BuildingMaterialsProducts";
 import FakirProducts from "./layout/Main/FakirProducts";
 import AppleProducts from "./layout/Main/AppleProducts"
 import Swiper from "./layout/Main/swiper"
+import MineSliders from "./layout/Main/MineSlider/MineSliders"
 
 function App() {
   return (
     <div className="wrapper">
       <Header />
+      <MineSliders />
       <Brands />
       <LinkImages/>
       <NotesCards/>
