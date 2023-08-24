@@ -2,6 +2,7 @@
     &__wrapper {
         @include flex(center, space-between);
         padding: 32px 0;
+        display: none;
     }
 
     .header-catalog {
