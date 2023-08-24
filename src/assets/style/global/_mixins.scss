@@ -3,6 +3,10 @@
     align-items: $alignItem;
     justify-content: $justifyContent;
 }
+@mixin wihe($width: 100px, $height: 100px) {
+    width: $width;
+    height: $height;
+}
 
 $maxWidth: 1920;
 $maxWidthContainer: 1440;
