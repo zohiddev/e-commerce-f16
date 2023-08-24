@@ -1,3 +1,4 @@
+import Brands from "./layout/Main/brands"
 import LinkImages from "./layout/Main/LinkImages"
 import NotesCards from "./layout/Main/NotesCards"
 import Header from "./layout/Header";
@@ -18,11 +19,11 @@ import FakirProducts from "./layout/Main/FakirProducts";
 import AppleProducts from "./layout/Main/AppleProducts"
 import Swiper from "./layout/Main/swiper"
 
-
 function App() {
   return (
     <div className="wrapper">
       <Header />
+      <Brands />
       <LinkImages/>
       <NotesCards/>
       <Swiper/>
