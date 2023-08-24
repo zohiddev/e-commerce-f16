@@ -1,4 +1,3 @@
-import React from 'react'
 import BrandsIcon from '../../assets/icons/brandsIcons/BrandsIcon'
 import AppleIcon from '../../assets/icons/brandsIcons/ApplebrandIcon'
 function Brands() {
