@@ -146,15 +146,6 @@ const Header = () => {
                     </div>
                 </div>
             </div>
-            {/* <div className="header__signup">
-                <div className="header__signup__panel">
-                    <h1 className="header__signup__title">Tizimga kirish yoki profil yaratish</h1>
-                    <div className="header__signup__form">
-                        <label htmlFor="number" className='header__signup__label'>Telefon raqami</label>
-                        <input className='header__signup__input' id='number' type="number" />
-                    </div>
-                </div>
-            </div> */}
         </header>
     )
 }
