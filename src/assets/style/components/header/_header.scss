@@ -3,6 +3,12 @@
     &__wrapper {
         @include flex(center, space-between);
         padding: 32px 0;
+    }
+
+    &__dropdown{
+        position: relative;
+
+       &.close{
         display: none;
     }
 
@@ -10,6 +16,51 @@
         border: 1px solid #000;
         padding: 16px 30px;
         border-radius: 12px;
+        color: #c71717;
+        transition: all 0.2s ease-in-out;
+
+
+        @include media(1025){
+            
+        }
+
+
+
+        &:hover{
+            border: 2px solid #da002b;
+        }
+
+        & span{
+            transition: all 0.2s ease-in-out;
+            
+        }
+
+        &:hover span{
+            color: #da002b;
+
+        }
+
+        & svg rect{
+            transition: all 0.2s ease-in-out;
+        }
+     
+
+
+        &:hover svg rect{
+            fill: #da002b;
+
+        }
+
+        & svg path{
+            transition: all 0.2s ease-in-out;
+
+
+        }
+
+        &:hover svg path{
+            stroke: #da002b;
+
+        }
 
         &__button {
             @include flex();
@@ -19,18 +70,68 @@
     }
 
     .header-search {
-        @include flex;
+        @include flex();
         &__input {
-            padding: 12px 24px;
+            padding: 18px 24px 18px 24px;
+            width: 780px;
+            height: 48px;
             background: #F2F2F2;
             border-radius: 12px;
             outline: none;
+            transition: all 0.2s ease-in-out;
+            @include adaptive-value('width', 780, -700);
+
+
+            &:focus{
+                box-shadow: 0 0 0 9999px #00000080;
+            }
+
+
+            
+            @include media(1025){
+                @include adaptive-value('width', 1220, 200);
+
+            }
+
+
+
+        }
+
+        &__button{
+            @include flex(center,center);
+            padding: 10px 24px;
+            border-radius: 12px;
+            background-color: #da002b;
+            position: absolute;
+            right: 0.5%;
+            transition: all 0.2s ease-in-out;
+            flex: 1 1 auto;
+
+            @include media(1025){
+                position: absolute;
+                right: 100%;
+                left: 0;
+                background-color: transparent;
+            }
+
+
+
+            &:hover{
+                padding: 11px 25px;
+
+            }
+
         }
     }
 
     .header-buttons {
         @include flex(center, space-between);
         gap: 30px;
+
+        @include media(1025){
+            display: none;
+        }
+
         &__item {
             @include flex;
             flex-direction: column;
