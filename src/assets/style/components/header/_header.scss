@@ -1,7 +1,85 @@
 .header {
     &__wrapper {
         @include flex(center, space-between);
-        padding: 32px 0;
+        margin-top: 32px;
+
+
+        @include media(1025){
+            flex-direction: column;
+        }
+    }
+
+
+    &__navigation{
+        display: none;
+
+
+
+        @include media(1025){
+            @include flex(center, space-between);
+            background-color: #fff;
+            bottom: 0;
+            box-shadow: 0 -4px 8px #0000000f;
+            // flex: 1;
+            height: 68px;
+            left: 0;
+            padding: 8px 10px;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+
+
+        &__buttons{
+            width: 90%;
+            @include flex(center,space-between);
+            position: fixed;
+            bottom: 0;
+        }
+
+
+        &__button{
+            
+            @include flex(center,center);
+            flex-direction: column;
+
+
+
+            &__text{
+                color: #111;
+                font-size: 11px;
+                line-height: 1.45;
+            }
+        }
+    }
+
+    &__info{
+        @include flex(center,center);
+        width: 100%;
+       
+    }
+
+    &__logo{
+        margin-right: 32px;
+        @include flex(center,space-between);
+        width: 100%;
+
+
+
+        &__icon{
+            display: none;
+
+
+            @include media(1025){
+                display: block;
+            }
+        }
+
+
+        @include media(1025){
+            margin-bottom: 40px;
+        }
     }
 
     &__dropdown{
@@ -57,6 +135,7 @@
 
         &__content{
             @include flex(start,start);
+            padding-top: 25px;
 
 
             @include media(1025){
@@ -74,6 +153,7 @@
             display: flex;
             flex-direction: column;
             padding-bottom: 40px;
+            flex: 1;
 
 
             @include media(1025){
@@ -100,8 +180,6 @@
             &__title{
                 @include flex(center,space-between);
                 z-index: 10;
-
-                
             }
 
 
@@ -150,9 +228,16 @@
         border-radius: 12px;
         color: #c71717;
         transition: all 0.2s ease-in-out;
+        margin-right: 32px;
+        flex-shrink: 0;
+
 
 
         @include media(1025){
+            width: 45px;
+            height: 45px;
+            margin-left: 50px;
+            margin-right: 10px;
             
         }
 
@@ -216,18 +301,77 @@
     }
 
     .header-search {
-        @include flex();
+        @include flex(center,center);
+        position: relative;
+        margin-right: 32px;
+        width: 100%;
+
+
+      
+
+
+
         &__input {
-            padding: 12px 24px;
+            padding: 18px 24px 18px 24px;
+            width: 780px;
+            height: 48px;
             background: #F2F2F2;
             border-radius: 12px;
             outline: none;
+            transition: all 0.2s ease-in-out;
+            @include adaptive-value('width', 780, -700);
+
+
+            &:focus{
+                box-shadow: 0 0 0 9999px #00000080;
+            }
+
+
+            
+            @include media(1025){
+                @include adaptive-value('width', 1220, 200);
+
+            }
+
+
+
+        }
+
+        &__button{
+            @include flex(center,center);
+            padding: 10px 24px;
+            border-radius: 12px;
+            background-color: #da002b;
+            position: absolute;
+            right: 0.5%;
+            transition: all 0.2s ease-in-out;
+            flex: 1 1 auto;
+
+            @include media(1025){
+                position: absolute;
+                right: 100%;
+                left: 0;
+                background-color: transparent;
+            }
+
+
+
+            &:hover{
+                padding: 11px 25px;
+
+            }
+
         }
     }
 
     .header-buttons {
         @include flex(center, space-between);
         gap: 30px;
+
+        @include media(1025){
+            display: none;
+        }
+
         &__item {
             @include flex;
             flex-direction: column;

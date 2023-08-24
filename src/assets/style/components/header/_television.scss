@@ -30,6 +30,7 @@
         &__item{
             @include flex(start,start);
             flex-direction: column;
+            margin-bottom: 30px;
 
 
             &__link{
