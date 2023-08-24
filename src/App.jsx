@@ -1,3 +1,5 @@
+import LinkImages from "./layout/Main/LinkImages"
+import NotesCards from "./layout/Main/NotesCards"
 import Header from "./layout/Header";
 import TecnologyProducts from "./layout/Main/TecnologyProducts";
 import ClothesProducts from "./layout/Main/ClothesProducts";
@@ -21,6 +23,8 @@ function App() {
   return (
     <div className="wrapper">
       <Header />
+      <LinkImages/>
+      <NotesCards/>
       <Swiper/>
       <AppleProducts/>
       <TecnologyProducts />
