@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import MainLogo from '../../assets/icons/MainLogo'
 import BurgerIcon from '../../assets/icons/BurgerIcon'
 import SearchIcon from '../../assets/icons/SearchIcon'
@@ -78,6 +78,7 @@ const Header = () => {
                                 <ProfileIcon />
                             </span>
                             <span>Kirish</span>
+                            
                         </button>
                     </div>
                 </div>
