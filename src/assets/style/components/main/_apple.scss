@@ -1,0 +1,228 @@
+.apple{
+    
+    &__cards{
+        @include flex(center, center);
+        // flex-direction: row;
+        gap: 330px;
+        background-color: rgb(227, 227, 227);
+    }
+
+    &__card{
+        background-color: white;
+        width: 240px;
+        height: 100%;
+        @include flex(flex-start, unset);
+        padding: 20px 15px;
+        border-radius: 12px;
+    }
+
+    &__title{
+        font-size: 16px;
+        color: #111;
+        font-weight: 500;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+
+    &__subtitle{
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+
+    &__products-img{
+        width: 150px;
+        height: 150px;
+        margin-bottom: 20px;
+        margin-left: 30px;
+    }
+
+    &__kredit{
+        font-feature-settings: "pnum" on,"lnum" on;
+        background: #ffd740;
+        border-radius: 6px;
+        color: #111;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 16px;
+        min-height: 24px;
+        order: 3;
+        padding: 4px 8px;
+        white-space: nowrap;
+        @include flex(center, center)
+    }
+
+    &__basket-icon{
+        border: 1px solid black;
+        border-radius: 8px;
+    }
+
+    &__card-buttons{
+        @include flex(center, space-between);
+        gap: 3px;
+        margin-top: 50px;
+    }
+
+    &__button-text{
+        border: 2px solid red;
+        padding: 8px;
+        font-size: 16px;
+        font-weight: 500;
+        border-radius: 8px;
+    }
+
+    &__card-row{
+        @include flex(center, center);
+        gap: 10px;
+    }
+
+    &__text-content{
+        margin-bottom: 30px;
+    }
+
+    &__info{
+        @include flex(center, space-between);
+        padding-top: 50px;
+    }
+
+    &__info-text{
+        font-size: 32px;
+        font-weight: 600;
+    }
+
+    &__link{
+        color: #da002b;
+    }
+
+    &__arrow-link{
+        @include flex(center, unset);
+        gap: 15px;
+    }
+
+    &__mouse-card{
+        background-color: white;
+        width: 280px;
+        padding: 50px 0;
+        border-radius: 12px;
+        @include flex(flex-start, center)
+    }
+
+    &__button-text{
+        width: 100%;
+    }
+
+    &__watch-content{
+        background-color: white;
+        @include flex(center, unset);
+        gap: 10px;
+        width: 280px;
+        padding: 20px 15px;
+        border-radius: 12px;
+        margin-top: 50px;
+        margin-bottom: 30px;
+        padding-bottom: 50px;
+    }
+
+    &__watch-image{
+        width: 100px;
+    }
+
+    &__watch-link{
+        width: 100%;
+        color: #111;
+        font-size: 16px;
+        font-weight: 500;
+        height: 48px;
+        line-height: 24px;
+        overflow: hidden;
+    }
+
+    &__mouse-link:hover{
+        color: red;
+        transition: all 0.2s ease-in-out;
+    }
+
+    &__watch-price{
+        color: #111;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 24px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    &__all-items{
+        @include flex(flex-start, unset);
+        gap: 15px;
+    }
+
+    &__video{
+        border-radius: 15px;
+        flex: 0 1 50%;
+    }
+
+    &__ipad-content{
+        background-color: white;
+        @include flex(center, center);
+        gap: 10px;
+        width: 500px;
+        padding: 15px 10px;
+        border-radius: 12px;
+        // margin-top: 30px;
+        // margin-bottom: 30px;
+        // padding-bottom: 50px;
+
+    }
+
+    &__ipad-image{
+        width: 200px;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    
+    &__watch-link{
+        width: 400px;
+        color: #111;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        overflow: hidden;
+    }
+
+    &__watch-link:hover{
+        color: red;
+        transition: all 0.2s ease-in-out;
+        
+    }
+
+    &__title{
+        @include flex(center, unset);
+        flex-direction: column;
+    }
+
+    &__flex{
+        @include flex(flex-start, unset);
+        gap: 10px;
+    }
+
+    &__ipad-buttons{
+        @include flex(flex-start, center);
+        gap: 10px;
+        margin-top: 100px;
+    }
+
+    &__b{
+        @include flex(center, space-between);
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    &__text-button{
+        border: 2px solid red;
+        padding: 8px;
+        font-size: 15px;
+        border-radius: 8px;
+    }
+}
