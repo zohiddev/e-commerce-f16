@@ -13,11 +13,16 @@ import FridgesProducts from "./layout/Main/FridgesProduct";
 import AutomobilProducts from "./layout/Main/AutomobilProducts";
 import BuildingMaterialsProducts from "./layout/Main/BuildingMaterialsProducts";
 import FakirProducts from "./layout/Main/FakirProducts";
+import AppleProducts from "./layout/Main/AppleProducts"
+import Swiper from "./layout/Main/swiper"
+
 
 function App() {
   return (
     <div className="wrapper">
       <Header />
+      <Swiper/>
+      <AppleProducts/>
       <TecnologyProducts />
       <ClothesProducts/>
       <ConditsionerProducts />
