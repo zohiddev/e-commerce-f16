@@ -1,3 +1,4 @@
+import Footer from "./layout/Footer/Footer"
 import Brands from "./layout/Main/brands"
 import LinkImages from "./layout/Main/LinkImages"
 import NotesCards from "./layout/Main/NotesCards"
@@ -42,6 +43,7 @@ function App() {
       <AutomobilProducts />
       <BuildingMaterialsProducts />
       <FakirProducts />
+      <Footer />
     </div>
   );
 }
