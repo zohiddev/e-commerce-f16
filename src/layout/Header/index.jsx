@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import MainLogo from '../../assets/icons/MainLogo'
 import BurgerIcon from '../../assets/icons/BurgerIcon'
 import SearchIcon from '../../assets/icons/SearchIcon'
@@ -6,12 +6,11 @@ import CompareIcon from '../../assets/icons/CompareIcon'
 import LikeIcon from '../../assets/icons/LikeIcon'
 import BascetIcon from '../../assets/icons/BascetIcon'
 import ProfileIcon from '../../assets/icons/ProfileIcon'
-import Xicon from '../../assets/icons/Xicon'
-import DownArrow from '../../assets/icons/DownArrow'
 import { categoryData } from '../../data/category'
 import HomeIcon from '../../assets/icons/HomeIcon'
 import CategorySearch from '../../assets/icons/CategorySearch'
 import PhoneIcon from '../../assets/icons/PhoneIcon'
+import { Link } from 'react-router-dom'
 
 
 const Header = () => {
@@ -43,7 +42,7 @@ const Header = () => {
                     <div className="header__info">
                        <div className="header__catalog header-catalog">
                         <button className='header-catalog__button' onClick={handleSidebarToggle}>
-                        {isOpen ? <Xicon/> : <BurgerIcon/>} 
+                        {isOpen ? 'X' : <BurgerIcon/>} 
                             <span className='header-catalog__title'>Katalog</span>
                         </button>
                        </div>
@@ -55,12 +54,12 @@ const Header = () => {
                        </div>
                     </div>
                     <div className="header__buttons header-buttons">
-                        <button className="header-buttons__item">
+                        <Link className="header-buttons__item" to="/compare">
                             <span className="header-buttons__icon">
                                 <CompareIcon />
                             </span>
                             <span>Taqqoslash</span>
-                        </button>
+                        </Link>
                         <button className="header-buttons__item">
                             <span className="header-buttons__icon">
                                 <LikeIcon />
@@ -89,7 +88,7 @@ const Header = () => {
                        <div className="header__dropdown__nav">
                         <div className="header__dropdown__nav__title">
                             <div className="header__dropdown__nav_text">Kategoriyalar</div>
-                            <button className="header__dropdown__nav_icon" onClick={closeSidebar}><Xicon/></button>
+                            <button className="header__dropdown__nav_icon" onClick={closeSidebar}>X</button>
                         </div>
                         {
                             categoryData.map(item => (
@@ -99,7 +98,7 @@ const Header = () => {
                                     onMouseEnter={() => handleActiveCategory(item.id)}
                                 >
                                     {item.name_uz} 
-                                    <span className='header__dropdown__link__icon' onClick={() => handleActiveCategory(item.id)}><DownArrow/></span>
+                                    <span className='header__dropdown__link__icon' onClick={() => handleActiveCategory(item.id)}></span>
                                 </a>
                             ))
                         }

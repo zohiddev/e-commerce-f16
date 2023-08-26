@@ -1,50 +1,17 @@
+import { Route, Routes } from "react-router-dom";
 import Footer from "./layout/Footer/Footer"
-import Brands from "./layout/Main/brands"
-import LinkImages from "./layout/Main/LinkImages"
-import NotesCards from "./layout/Main/NotesCards"
 import Header from "./layout/Header";
-import TecnologyProducts from "./layout/Main/TecnologyProducts";
-import ClothesProducts from "./layout/Main/ClothesProducts";
-import ConditsionerProducts from "./layout/Main/ConditsionerProducts";
-import WashingMachinesProducts from "./layout/Main/WashingMachinesProducts";
-import CosmeticsProducts from "./layout/Main/CosmeticsProduct";
-import ComputerProducts from "./layout/Main/ComputerProducts";
-import BootsProducts from "./layout/Main/BootsProducts";
-import BooksProducts from "./layout/Main/BooksProducts";
-import TelevisionsProducts from "./layout/Main/TelevisionsProducts";
-import SportsToolsProducts from "./layout/Main/SportsToolsProducts";
-import FridgesProducts from "./layout/Main/FridgesProduct";
-import AutomobilProducts from "./layout/Main/AutomobilProducts";
-import BuildingMaterialsProducts from "./layout/Main/BuildingMaterialsProducts";
-import FakirProducts from "./layout/Main/FakirProducts";
-import AppleProducts from "./layout/Main/AppleProducts"
-import Swiper from "./layout/Main/swiper"
-import MineSliders from "./layout/Main/MineSlider/MineSliders"
+import { routes } from "./helpers/routes";
 
 function App() {
   return (
     <div className="wrapper">
       <Header />
-      <MineSliders />
-      <Brands />
-      <LinkImages/>
-      <NotesCards/>
-      <Swiper/>
-      <AppleProducts/>
-      <TecnologyProducts />
-      <ClothesProducts/>
-      <ConditsionerProducts />
-      <WashingMachinesProducts />
-      <CosmeticsProducts />
-      <ComputerProducts />
-      <BootsProducts />
-      <BooksProducts />
-      <TelevisionsProducts />
-      <SportsToolsProducts />
-      <FridgesProducts />
-      <AutomobilProducts />
-      <BuildingMaterialsProducts />
-      <FakirProducts />
+      <Routes>
+        {routes.map((item) => (
+          <Route path={item.path} element={<item.element />} key={item.path}/>
+        ))}
+      </Routes>
       <Footer />
     </div>
   );
