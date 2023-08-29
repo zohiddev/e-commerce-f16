@@ -68,11 +68,11 @@ function BasketContent() {
                 <div className="basket__data-div">
                 <div className="basket__data-form">
                     <p className="basket__data-title">Имя и фамилия</p>
-                    <div className="basket__data-input"></div>
+                    <input className="basket__data-input"></input>
                 </div>
                 <div className="basket__data-form">
                     <p className="basket__data-title">Имя и фамилия</p>
-                    <div className="basket__data-input"></div>
+                    <input className="basket__data-input"></input>
                 </div>
                 </div>
             </div>
