@@ -32,7 +32,7 @@ function App() {
       {/* <NotesCards/> */}
       <MainSwiper/>
       <AppleCards/>
-      {/* <AppleProducts/> */}
+      <AppleProducts/>
       {/* <TecnologyProducts /> */}
       {/* <ClothesProducts/> */}
       {/* <ConditsionerProducts /> */}
