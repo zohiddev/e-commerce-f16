@@ -27,7 +27,7 @@ function Footer() {
         </div>
       </div> */}
       <div className="footer__top top-footer">
-        <div className="top-footer__container ">  
+        <div className="top-footer__container _container">  
         <div className="top-footer__stores">
           <div className="top-footer__stores-head">
           Наше мобильное приложение доступно в AppGallery, App store и Google play
