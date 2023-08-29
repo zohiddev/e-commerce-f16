@@ -1,5 +1,6 @@
 import Home from "../pages";
 import CompareProducts from "../pages/CompareProducts";
+import FovoritePage from "../pages/FovoritePage";
 import ProductItem from "../pages/ProductItem";
 
 export const routes = [
@@ -14,5 +15,9 @@ export const routes = [
     {
         path: "/product/:id",
         element: ProductItem
+    },
+    {
+        path: "/fovorite",
+        element: FovoritePage
     }
 ]

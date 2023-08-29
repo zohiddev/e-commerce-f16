@@ -98,7 +98,7 @@ function NotesCards() {
             <div className="notes__container">
             <div className="notes__panel"><button className="notes__panel__button">B</button></div>
                 <img src="./src/assets/images/notes__image8.png" alt="" className="notes__img" />
-                <div className="notes__cont">
+                <div className="notes__cont">   
                     <div className="notes__desc">Ноутбук Asus TUF FX506HCB i5-11400H 8/512GB SSD
                     RTX3050 15.6" FHD (from UAE)</div>
                     <a href="/" className="notes__link">1 258 000 сум x 12 мес</a>
