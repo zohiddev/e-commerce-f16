@@ -9,6 +9,7 @@ function FovoritePage() {
              <div className="compare__info-head">
                 <span>Избранные товары</span>
               </div>
+              <div className=""></div>
               <div>
               < ComputerProducts />
               </div>
