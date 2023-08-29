@@ -66,12 +66,12 @@ const Header = () => {
                             </span>
                             <span>Sevimlilar</span>
                         </Link>
-                        <button className="header-buttons__item">
+                        <Link to="/basket" className="header-buttons__item">
                             <span className="header-buttons__icon">
                                 <BascetIcon />
                             </span>
                             <span>Savatcha</span>
-                        </button>
+                        </Link>
                         <button className="header-buttons__item">
                             <span className="header-buttons__icon">
                                 <ProfileIcon />
