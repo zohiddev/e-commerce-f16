@@ -3,7 +3,6 @@
     align-items: $alignItem;
     justify-content: $justifyContent;
 }
-
 @mixin wihe($width: 100px, $height: 100px) {
     width: $width;
     height: $height;
