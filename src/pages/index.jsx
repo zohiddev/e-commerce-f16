@@ -18,11 +18,13 @@ import BuildingMaterialsProducts from '../layout/Main/BuildingMaterialsProducts'
 import FakirProducts from '../layout/Main/FakirProducts'
 import MineSliders from '../layout/Main/MineSlider/MineSliders'
 import MainSwiper from '../layout/Main/MainSwiper'
+import AppleCards from '../layout/Main/AppleCards'
 
 const Home = () => {
   return (
     <>
       <MainSwiper />
+      <AppleCards />
       <MineSliders />
       <Brands />
       <LinkImages />
