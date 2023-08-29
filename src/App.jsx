@@ -25,29 +25,28 @@ import AppleCards from "./layout/Main/AppleCards";
 function App() {
   return (
     <div className="wrapper">
-      {/* <Header /> */}
-      {/* <MineSliders /> */}
-      {/* <Brands /> */}
-      {/* <LinkImages/> */}
-      {/* <NotesCards/> */}
+      <Header />
+      <MineSliders />
+      <Brands />
+      <LinkImages/>
+      <NotesCards/>
       <MainSwiper/>
       <AppleCards/>
-      <AppleProducts/>
-      {/* <TecnologyProducts /> */}
-      {/* <ClothesProducts/> */}
-      {/* <ConditsionerProducts /> */}
-      {/* <WashingMachinesProducts /> */}
-      {/* <CosmeticsProducts /> */}
-      {/* <ComputerProducts /> */}
-      {/* <BootsProducts /> */}
-      {/* <BooksProducts /> */}
-      {/* <TelevisionsProducts /> */}
-      {/* <SportsToolsProducts /> */}
-      {/* <FridgesProducts /> */}
-      {/* <AutomobilProducts /> */}
-      {/* <BuildingMaterialsProducts /> */}
-      {/* <FakirProducts /> */}
-      {/* <Footer /> */}
+      <TecnologyProducts />
+      <ClothesProducts/>
+      <ConditsionerProducts />
+      <WashingMachinesProducts />
+      <CosmeticsProducts />
+      <ComputerProducts />
+      <BootsProducts />
+      <BooksProducts />
+      <TelevisionsProducts />
+      <SportsToolsProducts />
+      <FridgesProducts />
+      <AutomobilProducts />
+      <BuildingMaterialsProducts />
+      <FakirProducts />
+      <Footer />
     </div>
   );
 }

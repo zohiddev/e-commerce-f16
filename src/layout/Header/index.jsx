@@ -94,7 +94,7 @@ const Header = () => {
                             <div className="header__dropdown__nav_text">Kategoriyalar</div>
                             <button className="header__dropdown__nav_icon" onClick={closeSidebar}>x</button>
                         </div>
-                        {
+                        {/* {
                             categoryData.map(item => (
                                 <a 
                                     // href={item.path} 
@@ -105,20 +105,20 @@ const Header = () => {
                                     <span className='header__dropdown__link__icon' onClick={() => handleActiveCategory(item.id)}></span>
                                 </a>
                             ))
-                        }
+                        } */}
                        </div>
                        <div className="header__dropdown__info">
                         {
-                            categoryData.find(item => item.id === activeCategory).children.map(subItem => (
-                                <div className="tv__panel__item">
-                                    <p className="tv__panel__item__title">{subItem.name_uz}</p>
-                                    {
-                                        subItem.children.map(el => (
-                                            <a  className="tv__panel__item__link">{el.name_uz}</a>
-                                        ))
-                                    }
-                                </div>
-                            ))
+                            // categoryData.find(item => item.id === activeCategory).children.map(subItem => (
+                            //     <div className="tv__panel__item">
+                            //         <p className="tv__panel__item__title">{subItem.name_uz}</p>
+                            //         {
+                            //             subItem.children.map(el => (
+                            //                 <a  className="tv__panel__item__link">{el.name_uz}</a>
+                            //             ))
+                            //         }
+                            //     </div>
+                            // ))
                         }
                        </div> 
                     </div>
