@@ -121,3 +121,72 @@ export const productsTechnologics = [
         credit: "1 040 000 сум x 12 мес",
     },
 ];
+
+export const notesProduct1to2 = [
+    {
+        id: "1item",
+        key:1,
+        img: "../src/assets/images/notes__image1.png",
+        title: 'Ноутбук Asus TUF FX506HCB i5-11400H 8/512GB SSD RTX3050 15.6" FHD (from UAE)',
+        credit: "355 000 сум x 12 мес"
+    },
+    {
+        id: "2item",
+        key:2,
+        img: "../src/assets/images/notes__image2.png",
+        title: 'Ноутбук Asus TUF FX506HCB i5-11400H 8/512GB SSD RTX3050 15.6" FHD (from UAE)',
+        credit: "355 000 сум x 12 мес"
+    },
+]
+
+export const notesProduct3to4 = [
+    {
+        id: "3item",
+        key:3,
+        img: "../src/assets/images/notes__image3.png",
+        title: 'Ноутбук Asus TUF FX506HCB i5-11400H 8/512GB SSD RTX3050 15.6" FHD (from UAE)',
+        credit: "355 000 сум x 12 мес"
+    },
+    {
+        id: "4item",
+        key:4,
+        img: "../src/assets/images/notes__image4.png",
+        title: 'Ноутбук Asus TUF FX506HCB i5-11400H 8/512GB SSD RTX3050 15.6" FHD (from UAE)',
+        credit: "355 000 сум x 12 мес"
+    }
+]
+
+
+export const notesProduct5to6 = [
+    {
+        id: "1item",
+        key:5,
+        img: "../src/assets/images/notes__image5.png",
+        title: 'Ноутбук Asus TUF FX506HCB i5-11400H 8/512GB SSD RTX3050 15.6" FHD (from UAE)',
+        credit: "355 000 сум x 12 мес"
+    },
+    {
+        id: "2item",
+        key:6,
+        img: "../src/assets/images/notes__image6.png",
+        title: 'Ноутбук Asus TUF FX506HCB i5-11400H 8/512GB SSD RTX3050 15.6" FHD (from UAE)',
+        credit: "355 000 сум x 12 мес"
+    }
+]
+
+export const notesProduct7to8 = [
+    {
+        id: "3item",
+        key:7,
+        img: "../src/assets/images/notes__image7.png",
+        title: 'Ноутбук Asus TUF FX506HCB i5-11400H 8/512GB SSD RTX3050 15.6" FHD (from UAE)',
+        credit: "355 000 сум x 12 мес"
+    },
+    {
+        id: "4item",
+        key:8,
+        img: "../src/assets/images/notes__image8.png",
+        title: 'Ноутбук Asus TUF FX506HCB i5-11400H 8/512GB SSD RTX3050 15.6" FHD (from UAE)',
+        credit: "355 000 сум x 12 мес"
+    }
+]

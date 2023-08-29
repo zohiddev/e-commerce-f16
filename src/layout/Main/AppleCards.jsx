@@ -5,6 +5,7 @@ import Bascet from '../../assets/icons/BascetIcon';
 import LikeIconGray from '../../assets/icons/LikeIconGray';
 import ProfileIconGray from '../../assets/icons/ProfileIconGray';
 import { appleList } from '../../utils/data';
+import { Link } from "react-router-dom"
 
 function AppleCards() {
     return (
@@ -28,7 +29,7 @@ function AppleCards() {
 
                             <img src="./src/assets/images/appleImg1.jpg" alt="" />
                             <div className="apple__mouse-items">
-                                <a href="" className='apple__mouse-link'>Apple Magic mouse 3</a>
+                                <Link to="/apple" className='apple__mouse-link'>Apple Magic mouse 3</Link>
                                 <p className='apple__title'>1 455 00 so'm</p>
                                 <p className='apple__kredit'>189 000 so'm x 12 oy</p>
                             </div>
@@ -60,7 +61,7 @@ function AppleCards() {
                         <div className="apple__watch-content">
                             <img className='apple__watch-image' src="./src/assets/images/appleImg6.jpeg" alt="" />
                             <div className='apple__watch-items'>
-                                <a href="/" className='apple__watch-link'>Aqlli soat Aplle Watch Ultra</a>
+                                <Link to="/apple" className='apple__watch-link'>Aqlli soat Aplle Watch Ultra</Link>
                                 <p className='apple__watch-price'>12 183 000 so'm</p>
                                 <p className='apple__kredit'>1 443 000 so'm x 12 oy</p>
                             </div>
@@ -83,6 +84,7 @@ function AppleCards() {
                                     <div className='apple__flex'>
 
                                         <div className='apple__watch-items'>
+                                            <Link to="/apple" className='apple__ipad-link'>Magic Keybooard Russian 12.9-inc 2021 Oq</Link>
                                             <a href="/" className='apple__ipad-link'>Magic Keybooard Russian 12.9-inc 2021 Oq</a>
                                             <p className='apple__watch-price'>6 273 000 so'm</p>
                                             <p className='apple__kredit'>811 000 so'm x 12 oy</p>
