@@ -3,20 +3,20 @@ import HeartIcon from "../../assets/icons/HeartIcon";
 import CompareIconProduct from "../../assets/icons/CompareIconProduct";
 import MagazineIcon from "../../assets/icons/MagazineIcon";
 
-const ProductTechnologics = (props) => {
+const ProductItem = ({ product }) => {
   return (
     <div className="noutbuk_first ">
       <div className="noutbuk_first_image">
         <div className="noutbuk_first_image_discount">
           <h1 className="noutbuk_first_image_discount_title">
             {" "}
-            {props.discount}{" "}
+            {product.discount}{" "}
           </h1>
         </div>
         <div className="noutbuk_first_image_image">
           <img
             className="noutbuk_first_image_image_image"
-            src={props.img}
+            src={product.img}
             alt="noutbuk_first"
           />
         </div>
@@ -27,17 +27,17 @@ const ProductTechnologics = (props) => {
       </div>
       <div className="noutbuk_first_texts">
         <div className="noutbuk_first_texts_title">
-          <a href="#">{props.title}</a>
+          <a href="#">{product.title}</a>
         </div>
         <div className="noutbuk_first_texts_lastpayment">
-          <a href="#">{props.lastpayment}</a>
+          <a href="#">{product.lastpayment}</a>
         </div>
         <div className="noutbuk_first_texts_payment">
-          <a href="#">{props.paymment}</a>
+          <a href="#">{product.paymment}</a>
         </div>
         <div className="noutbuk_first_texts_credit">
           <a className="noutbuk_first_texts_credit_title" href="#">
-            {props.credit}
+            {product.credit}
           </a>
         </div>
       </div>
@@ -51,4 +51,4 @@ const ProductTechnologics = (props) => {
   );
 };
 
-export default ProductTechnologics;
+export default ProductItem;

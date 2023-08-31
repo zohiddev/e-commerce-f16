@@ -26,7 +26,7 @@ function BasketContent() {
                             <div className="basket__items-text">Удалить</div>
                             <div className="basket__items-icon"><TrashIcon></TrashIcon></div>
                             </a>
-=
+
                         </div>
                     </div>
                     </div>

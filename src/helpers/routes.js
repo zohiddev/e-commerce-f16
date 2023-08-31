@@ -4,7 +4,6 @@ import CompareProducts from "../pages/CompareProducts";
 import FovoritePage from "../pages/FovoritePage";
 import ProductItem from "../pages/ProductItem";
 import ApplePage from "../pages/ApplePage";
-import BasketContent from "../pages/BasketContent";
 import NotePage from "../pages/NotePage";
 
 export const routes = [
