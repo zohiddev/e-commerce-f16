@@ -85,17 +85,30 @@
       padding: 10px;
       border-radius: 8px;
       border: 2px solid #111;
-      margin-right: 10px
+      margin-right: 10px;
+      transition: all 0.3s ease 0s;
+
+
+      &:hover{
+        background-color: #11111124
+      }
     }
     &_book{
       @include flex(center, center);
-      @include wihe(unset, 36px);
-      font-size: 12px;
+      width: 187px;
+      height: 40px;
+      font-size: 16px;
       line-height: 20px;
-      padding: 10px 55.4px 10px 55.6px;
+      padding: 8px;
       border-radius: 8px;
       border: 2px solid #DA002B;
       color: #DA002B;
+      transition: all 0.3s ease 0s;
+
+
+      &:hover{
+        background-color: #eb15370d;
+      }
     }
   }
 

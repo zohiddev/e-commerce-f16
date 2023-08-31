@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import MainLogo from '../../assets/icons/MainLogo'
 import BurgerIcon from '../../assets/icons/BurgerIcon'
 import SearchIcon from '../../assets/icons/SearchIcon'
@@ -17,7 +17,6 @@ import PhoneIcon from '../../assets/icons/PhoneIcon'
 const Header = () => {
     const [activeCategory, setActiveCategory] = useState(1)
     const [isOpen, setIsOpen] = useState(false);
-
     
     const handleSidebarToggle = () => {
         setIsOpen(!isOpen);

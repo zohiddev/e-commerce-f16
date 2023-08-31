@@ -8,6 +8,7 @@
         justify-content: center;
     }
 
+
     &__bacground {
         display: flex;
         justify-content: center;
@@ -17,6 +18,7 @@
       background-color: #D9D9D9;
       border-radius: 12px;
       margin:  0 0 12px;
+      z-index: -5;
       
     }
   
@@ -91,6 +93,7 @@
   li{
     width: 180px !important;
     margin-right: 30px;
+
   }
  
 

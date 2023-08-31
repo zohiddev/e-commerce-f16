@@ -25,12 +25,12 @@ function App() {
   return (
     <div className="wrapper">
       <Header />
-      <MineSliders />
-      <Brands />
-      <LinkImages/>
-      <NotesCards/>
-      <Swiper/>
-      <AppleProducts/>
+      {/* <MineSliders /> */}
+      {/* <Brands /> */}
+      {/* <LinkImages/> */}
+      {/* <NotesCards/> */}
+      {/* <Swiper/> */}
+      {/* <AppleProducts/> */}
       <TecnologyProducts />
       <ClothesProducts/>
       <ConditsionerProducts />
