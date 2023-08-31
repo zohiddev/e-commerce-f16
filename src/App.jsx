@@ -25,14 +25,14 @@ import AppleCards from "./layout/Main/AppleCards";
 function App() {
   return (
     <div className="wrapper">
-      {/* <Header /> */}
+      <Header />
       {/* <MineSliders /> */}
       {/* <Brands /> */}
       {/* <LinkImages/> */}
       {/* <NotesCards/> */}
       <MainSwiper/>
       <AppleCards/>
-      {/* <AppleProducts/> */}
+      {/* <AppleProd ucts/> */}
       {/* <TecnologyProducts /> */}
       {/* <ClothesProducts/> */}
       {/* <ConditsionerProducts /> */}

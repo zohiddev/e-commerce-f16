@@ -13,6 +13,9 @@ import ProfileIcon from '../../assets/icons/ProfileIcon'
 import HomeIcon from '../../assets/icons/HomeIcon'
 import CategorySearch from '../../assets/icons/CategorySearch'
 import PhoneIcon from '../../assets/icons/PhoneIcon'
+import { categoryData } from '../../data/category'
+import BottomArrow from '../../assets/icons/BottomArrow'
+import CloseIcon from '../../assets/icons/CloseIcon'
 
 
 const Header = () => {
@@ -32,7 +35,17 @@ const Header = () => {
         setIsOpen(false);
     }
 
+
     
+    const [open, setOpen] = useState(false)
+
+    function openModal(){
+        setOpen(true)
+    }
+
+    function closeModal(){
+        setOpen(false)
+    }
 
     return (
         <header className='header'>
@@ -76,16 +89,41 @@ const Header = () => {
                             </span>
                             <span>Savatcha</span>
                         </button>
-                        <button className="header-buttons__item">
+                        <button onClick={() => openModal()} className="header-buttons__item">
                             <span className="header-buttons__icon">
                                 <ProfileIcon />
                             </span>
                             <span>Kirish</span>
                             
                         </button>
+
+
                     </div>
                 </div>
+                            {/* <div className='header-black'></div> */}
+                      
             </div>
+                <div  className="modal-wrapper">
+                    <div className={open ? 'modal show': 'modal hide'}>
+                        {/* <div className="modal-black__layer"></div> */}
+                        <div className="modal-content">
+                                <h1 className='modal-title'>Tizimga kirish yoki profil yaratish</h1>
+                                <p className='modal-number'>Telefon raqami</p>
+                            <div className="modal-region">
+                                <p className='modal-region__value'>+998 <BottomArrow/> </p>
+                                <input className='modal-phone' min={2} maxLength={5} type="number" max={2} />
+                            </div>
+                                <button className='modal-confirmation'>Tasdiqlash</button>
+                    </div>
+                            <div className='modal-close'>
+                                <button onClick={() => closeModal()} className='modal-close__icon'>
+                                    <CloseIcon/>
+
+                                </button>
+                                    </div>
+                                </div>
+
+                </div>
             <div className={isOpen ? 'header__dropdown open' : 'header__dropdown close'} >
                 <div className="container">
                     <div className="header__dropdown__content">
