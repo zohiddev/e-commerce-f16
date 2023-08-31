@@ -4,7 +4,6 @@
 
     &__row{
         @include flex(start,start);
-        gap: 40px;
         padding: 24px 24px 0 40px;
 
 
@@ -30,7 +29,7 @@
         &__item{
             @include flex(start,start);
             flex-direction: column;
-            margin-bottom: 30px;
+            gap: 5px;
 
 
             &__link{
@@ -41,11 +40,14 @@
                 padding: 3px 0;
                 transition: .3s cubic-bezier(.4,0,.2,1);
 
+                
+
                 &:hover{
                     color: #da002b;
                 }
 
             }
+
 
 
 

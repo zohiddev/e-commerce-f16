@@ -23,11 +23,11 @@ import MainSwiper from '../layout/Main/MainSwiper'
 const Home = () => {
   return (
     <>
+      <MainSwiper />
       <MineSliders />
       <Brands />
       <LinkImages />
       <NotesCards />
-      <MainSwiper />
       <AppleProducts />
       <TecnologyProducts />
       <ClothesProducts />
