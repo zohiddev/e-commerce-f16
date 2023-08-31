@@ -1,4 +1,5 @@
 .header {
+    position: relative;
     &__wrapper {
         @include flex(center, space-between);
         margin-top: 32px;

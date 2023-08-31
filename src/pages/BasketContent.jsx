@@ -2,6 +2,7 @@ import React from 'react'
 import TrashIcon from '../assets/icons/TrasIcon'
 import LikeIconGray from '../assets/icons/LikeIconGray'
 
+
 function BasketContent() {
   return (
     <div className='basket container'>
@@ -25,6 +26,7 @@ function BasketContent() {
                             <div className="basket__items-text">Удалить</div>
                             <div className="basket__items-icon"><TrashIcon></TrashIcon></div>
                             </a>
+=
                         </div>
                     </div>
                     </div>
@@ -53,6 +55,7 @@ function BasketContent() {
                             <div className="basket__items-text">Удалить</div>
                             <div className="basket__items-icon"><TrashIcon></TrashIcon></div>
                             </a>
+
                         </div>
                     </div>
                     </div>
@@ -130,6 +133,7 @@ function BasketContent() {
                 </div>
                     <form className="basket__form">
                         <input type="number" className='basket__input'/>
+
                         <button className='basket__button'>Применить</button>
                     </form>
                 </div>

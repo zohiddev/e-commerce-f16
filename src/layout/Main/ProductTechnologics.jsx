@@ -2,12 +2,10 @@ import React from "react";
 import HeartIcon from "../../assets/icons/HeartIcon";
 import CompareIconProduct from "../../assets/icons/CompareIconProduct";
 import MagazineIcon from "../../assets/icons/MagazineIcon";
-import { Link } from "react-router-dom";
 
 const ProductTechnologics = (props) => {
-  console.log(props.id);
   return (
-    <Link to={`product/${props.id}`} className="noutbuk_first ">
+    <div className="noutbuk_first ">
       <div className="noutbuk_first_image">
         <div className="noutbuk_first_image_discount">
           <h1 className="noutbuk_first_image_discount_title">
@@ -49,7 +47,7 @@ const ProductTechnologics = (props) => {
         </button>
         <button className="noutbuk_first_buttons_book">In installments</button>
       </div>
-    </Link>
+    </div>
   );
 };
 

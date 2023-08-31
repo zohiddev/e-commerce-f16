@@ -16,8 +16,8 @@
 //   padding: 0;
 // }
 
-.swiper {
- display: flex;
+.swiperr {
+ display:   flex;
  justify-content: center;
  align-items: center;
   width: 100%;
@@ -28,7 +28,7 @@
     height: 196px;
   }
 
-  &-slide {
+  &-slidee {
     width: 128px !important;
     height: 128px;
     text-align: center;
@@ -47,21 +47,21 @@
       object-fit: cover
     }
 
-    &-active {
+    &-activee {
       width: 128px !important;
 
     }
 
-    &-next::after {
-      width: 128px !important;
-    }
+    // &-next::after {
+    //   width: 128px !important;
+    // }
   }
 
   &-button {
 
 
 
-    &-prev {
+    // &-prev {
 
       align-items: center;
       background: #fff;
@@ -119,7 +119,7 @@
   pointer-events: none;
     }
   }
-}
+
 
 
     

@@ -4,6 +4,7 @@ import ProfileIconGray from '../../assets/icons/ProfileIconGray'
 import Bascet from '../../assets/icons/BascetIcon'
 import RightArrowIcon from '../../assets/icons/RightArrowIcon'
 import { Link } from "react-router-dom"
+import AppleBacket from '../../assets/icons/AppleBacket'
 
 function ApplePanel(props) {
   return (
@@ -13,12 +14,13 @@ function ApplePanel(props) {
                 <img className='apple__products-img' src={props.img} alt="" />
                 <div className='apple__items'>
                     <Link to="/apple" className='app__title'>{props.title}</Link>
+
                     <p className='apple__subtitle'>{props.subtitle}</p>
                     <p className='apple__kredit'>{props.kredit}</p>
                 </div>
                 <div className="apple__card-buttons">
                     <button className='apple__basket-icon'>
-                        <Bascet/>
+                        <AppleBacket/>
                     </button>
 
                     <button className='apple__text-button'>

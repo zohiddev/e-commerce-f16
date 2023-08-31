@@ -7,11 +7,13 @@ function App() {
   return (
     <div className="wrapper">
       <Header />
+
       <Routes>
         {routes.map((item) => (
           <Route path={item.path} element={<item.element />} key={item.path}/>
         ))}
       </Routes>
+
       <Footer />
     </div>
   );
