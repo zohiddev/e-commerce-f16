@@ -26,28 +26,27 @@ function App() {
   return (
     <div className="wrapper">
       <Header />
-      {/* <MineSliders /> */}
-      {/* <Brands /> */}
-      {/* <LinkImages/> */}
-      {/* <NotesCards/> */}
+      <MineSliders />
+      <Brands />
+      <LinkImages/>
+      <NotesCards/>
       <MainSwiper/>
       <AppleCards/>
-      {/* <AppleProd ucts/> */}
-      {/* <TecnologyProducts /> */}
-      {/* <ClothesProducts/> */}
-      {/* <ConditsionerProducts /> */}
-      {/* <WashingMachinesProducts /> */}
-      {/* <CosmeticsProducts /> */}
-      {/* <ComputerProducts /> */}
-      {/* <BootsProducts /> */}
-      {/* <BooksProducts /> */}
-      {/* <TelevisionsProducts /> */}
-      {/* <SportsToolsProducts /> */}
-      {/* <FridgesProducts /> */}
-      {/* <AutomobilProducts /> */}
-      {/* <BuildingMaterialsProducts /> */}
-      {/* <FakirProducts /> */}
-      {/* <Footer /> */}
+      <TecnologyProducts />
+      <ClothesProducts/>
+      <ConditsionerProducts />
+      <WashingMachinesProducts />
+      <CosmeticsProducts />
+      <ComputerProducts />
+      <BootsProducts />
+      <BooksProducts />
+      <TelevisionsProducts />
+      <SportsToolsProducts />
+      <FridgesProducts />
+      <AutomobilProducts />
+      <BuildingMaterialsProducts />
+      <FakirProducts />
+      <Footer />
     </div>
   );
 }
