@@ -80,11 +80,14 @@ const Header = () => {
                             </span>
                             <span>Sevimlilar</span>
                         </Link>
-                        <Link to='/basket' className="header-buttons__item">
+                        <Link to="/basket" className="header-buttons__item">
+
                             <span className="header-buttons__icon">
                                 <BascetIcon />
                             </span>
                             <span>Savatcha</span>
+                        </Link>
+                        <button className="header-buttons__item">
 
                         </Link>
                         <button onClick={() => openModal()} className="header-buttons__item">

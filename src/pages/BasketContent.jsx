@@ -1,4 +1,7 @@
 import React from 'react'
+import TrashIcon from '../assets/icons/TrasIcon'
+import LikeIconGray from '../assets/icons/LikeIconGray'
+
 
 function BasketContent() {
   return (
@@ -12,15 +15,18 @@ function BasketContent() {
                     <div className="basket__items-product">
                     <img className='basket__items-img' src="../src/assets/img/Cosmetics_first.png" alt="" />
                     <div className="basket__items-cont">
-                        <h3 className="basket__items-title">Стайлер Dyson HS05 EU никель/медный</h3>
+                        <a href='' className="basket__items-title">Стайлер Dyson HS05 EU никель/медный</a>
                         <p className="basket__items-subtitle">SofiTex</p>
                         <div className="basket__items-buttons">
-                            <div className="basket__items-button">
-                            В избранное
-                            </div>
-                            <div className="basket__items-button border">
-                            Удалить
-                            </div>
+                            <a href='' className="basket__items-button">
+                            <div className="basket__items-text">В избранное</div>
+                            <div className="basket__items-icon"><LikeIconGray/></div>
+                            </a>
+                            <a href='' className="basket__items-button border">
+                            <div className="basket__items-text">Удалить</div>
+                            <div className="basket__items-icon"><TrashIcon></TrashIcon></div>
+                            </a>
+=
                         </div>
                     </div>
                     </div>
@@ -35,18 +41,21 @@ function BasketContent() {
                     </div>
                 </div>
                 <div className="basket__items-item">
-                <div className="basket__items-product">
+                    <div className="basket__items-product">
                     <img className='basket__items-img' src="../src/assets/img/Cosmetics_first.png" alt="" />
                     <div className="basket__items-cont">
-                        <h3 className="basket__items-title">Стайлер Dyson HS05 EU никель/медный</h3>
+                        <a href='' className="basket__items-title">Стайлер Dyson HS05 EU никель/медный</a>
                         <p className="basket__items-subtitle">SofiTex</p>
                         <div className="basket__items-buttons">
-                            <div className="basket__items-button">
-                            В избранное
-                            </div>
-                            <div className="basket__items-button border">
-                            Удалить
-                            </div>
+                            <a href='' className="basket__items-button">
+                            <div className="basket__items-text">В избранное</div>
+                            <div className="basket__items-icon"><LikeIconGray/></div>
+                            </a>
+                            <a href='' className="basket__items-button border">
+                            <div className="basket__items-text">Удалить</div>
+                            <div className="basket__items-icon"><TrashIcon></TrashIcon></div>
+                            </a>
+
                         </div>
                     </div>
                     </div>
@@ -123,7 +132,8 @@ function BasketContent() {
                     <div className="basket__price-num">10 868 920 сум</div>
                 </div>
                     <form className="basket__form">
-                        <input type="text" className='basket__input'/>
+                        <input type="number" className='basket__input'/>
+
                         <button className='basket__button'>Применить</button>
                     </form>
                 </div>

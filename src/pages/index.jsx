@@ -24,11 +24,13 @@ const Home = () => {
   return (
     <>
       <MainSwiper />
+
       <AppleCards />
       <MineSliders />
       <Brands />
       <LinkImages />
       <NotesCards />
+      <AppleProducts />
       <TecnologyProducts />
       <ClothesProducts />
       <ConditsionerProducts />
