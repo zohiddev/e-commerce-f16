@@ -1,5 +1,4 @@
 import React from 'react'
-import ComputerProducts from '../layout/Main/ComputerProducts'
 
 function FovoritePage() {
   return (
@@ -11,7 +10,7 @@ function FovoritePage() {
               </div>
               <div className=""></div>
               <div>
-              < ComputerProducts />
+              {/* < ComputerProducts /> */}
               </div>
              </main>
         </div>

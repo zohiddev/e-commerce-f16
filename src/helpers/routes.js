@@ -1,10 +1,10 @@
 import Home from "../pages";
-import CompareProducts from "../pages/CompareProducts";
-import ProductItem from "../pages/ProductItem";
-import ApplePage from "../pages/ApplePage";
 import BasketContent from "../pages/BasketContent";
+import CompareProducts from "../pages/CompareProducts";
+import FovoritePage from "../pages/FovoritePage";
+import ProductItem from "../pages/ProductItem";
+// import ApplePage from "../pages/ApplePage";
 import NotePage from "../pages/NotePage";
-import DataPage from "../pages/DataPage";
 
 export const routes = [
     {
@@ -19,9 +19,13 @@ export const routes = [
         path: "/product/:id",
         element: ProductItem
     },
+    // {
+    //     path: "/apple",
+    //     element: ApplePage
+    // },
     {
-        path: "/apple",
-        element: ApplePage
+        path: "/fovorite",
+        element: FovoritePage
     },
     {
         path: "/basket",
@@ -30,9 +34,6 @@ export const routes = [
     {
         path: "/note",
         element: NotePage
-    },
-    {
-        path: "/datapage",
-        element: DataPage
+
     }
 ]

@@ -1,34 +1,61 @@
 .apple{
-    
-    &__cards{
+
+    &__all{
         @include flex(center, center);
         // flex-direction: row;
-        gap: 330px;
-        background-color: rgb(227, 227, 227);
+        // gap: 330px;
+        background-color: #f2f2f2;
     }
 
     &__card{
         background-color: white;
-        width: 240px;
+        width: 260px;
         height: 100%;
         @include flex(flex-start, unset);
         padding: 20px 15px;
         border-radius: 12px;
+        transition: all 0.2s ease-in-out;
+
+        @media screen and (max-width: 1450px){
+            width: 250px;
+        }
+
+        @media screen and  (max-width: 1350px){
+            width: 280px;
+        }
+
+        @media screen and (max-width: 1210px){
+            width: 250px;
+        }
+
+        @media screen and (max-width: 1050px){
+            width: 240px;
+        }   
+
+        @media screen and (max-width: 1000px){
+            width: 220px;
+        }
+    }
+
+    &__card:hover{
+        transform: translateY(-10px);
+        cursor: pointer;
     }
 
     &__title{
-        font-size: 16px;
+        font-size: 18px;
         color: #111;
-        font-weight: 500;
+        font-weight: 700;
         width: 100%;
+        margin-top: 10px;
         margin-bottom: 30px;
     }
-
 
     &__subtitle{
         font-size: 18px;
         font-weight: 700;
         margin-bottom: 10px;
+        margin-top: 10px;
     }
 
     &__products-img{
@@ -36,6 +63,12 @@
         height: 150px;
         margin-bottom: 20px;
         margin-left: 30px;
+
+        @media screen and (max-width: 1000px){
+            width: 140px;
+            height: 140px;
+            margin-left: 20px;
+        }
     }
 
     &__kredit{
@@ -50,17 +83,23 @@
         order: 3;
         padding: 4px 8px;
         white-space: nowrap;
-        @include flex(center, center)
+        //@include flex(center, center);
+        width: 150px;
+
+        @media screen and (max-width: 380px){
+            width: 140px;
+        }
     }
 
     &__basket-icon{
-        border: 1px solid black;
+        border: 2px solid black;
         border-radius: 8px;
+        padding: 4px 5px;
     }
 
     &__card-buttons{
-        @include flex(center, space-between);
-        gap: 3px;
+        @include flex(center, center);
+        gap: 5px;
         margin-top: 50px;
     }
 
@@ -70,11 +109,26 @@
         font-size: 16px;
         font-weight: 500;
         border-radius: 8px;
+        transition: all 0.2s ease-in-out;
+        color: red;
+    }
+
+    &__button-text:hover{
+        background-color: #ffeff2;
     }
 
     &__card-row{
-        @include flex(center, center);
-        gap: 10px;
+        @include flex(center, flex-start);
+        gap: 25px;
+
+        @media screen and (max-width: 1450px){
+            gap: 15px;
+        }
+
+        @media screen and (max-width: 940px){
+            flex-wrap: wrap;
+            justify-content: center6;
+        }
     }
 
     &__text-content{
@@ -89,10 +143,26 @@
     &__info-text{
         font-size: 32px;
         font-weight: 600;
+
+        @media screen and (max-width: 500px){
+            font-size: 20px;
+        }
+
+        @media screen and (max-width: 400px){
+            font-size: 14px;
+        }
     }
 
     &__link{
         color: #da002b;
+
+        @media screen and (max-width: 500px){
+            font-size: 15px;
+        }
+
+        @media screen and (max-width: 400px){
+            font-size: 10px;
+        }
     }
 
     &__arrow-link{
@@ -102,30 +172,180 @@
 
     &__mouse-card{
         background-color: white;
-        width: 280px;
+        width: 300px;
         padding: 50px 0;
         border-radius: 12px;
-        @include flex(flex-start, center)
+        @include flex(flex-start, center);
+        transition: all 0.2s ease-in-out;
+
+        @media screen and (max-width: 1350px){
+           width: 100%;
+           gap: 200px;
+           padding: 10px;
+        }
+        
+        @media screen and (max-width: 1210px){
+            gap: 100px;
+        }
+
+        @media screen and (max-width: 1000px){
+            gap: 60px;
+        }
+       
+        @media screen and (max-width: 910px){
+            gap: 50px;
+        }
+
+        @media screen and (max-width: 870px){
+            gap: 90px;
+        }
+
+        @media screen and (max-width: 520px){
+            gap: 60px;
+        }
+
+        @media screen and (max-width: 465px){
+            width: 350px;
+        }
+
+        @media screen and (max-width: 467px){
+            width: 350px;
+            gap: 2px;
+        }
+
+        @media screen and (max-width: 380px){
+            width: 320px;
+            gap: 2px;
+        }
+    }
+
+    &__mouse-row{
+        @media screen and (max-width: 1350px){
+            @include flex(center, center);
+            gap: 10px;
+        }
+    }
+
+    &__mouse{
+        cursor: pointer;
+        @media screen and (max-width: 1350px){
+            @include flex(center, center);
+            gap: 15px;
+        }
+
+        @media screen and (max-width: 1210px){
+            margin: 0 auto;
+        }
+
+        @media screen and (max-width: 870px){
+            flex-direction: column;
+            gap: unset;
+        }
+    }
+
+    &__mouse-card:hover{
+        transform: translateY(-10px);
+    }
+
+    &__watch{
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+    }
+
+    &__watch:hover{
+        transform: translateY(-10px);
     }
 
     &__button-text{
         width: 100%;
+
+        @media screen and (max-width: 465px){
+            width: 137px;
+        }
+
+        @media screen and (max-width: 380px){
+            font-size: 12px;
+            width: 110px;
+        }
     }
 
-    &__watch-content{
+    &__watch-content{   
         background-color: white;
         @include flex(center, unset);
         gap: 10px;
-        width: 280px;
+        width: 300px;
         padding: 20px 15px;
         border-radius: 12px;
-        margin-top: 50px;
+        margin-top: 30px;
         margin-bottom: 30px;
         padding-bottom: 50px;
+
+        @media screen and (max-width: 1350px){
+            width: 490px;
+            height: 240px;
+        }
+
+        @media screen and (max-width: 1182px){
+            width: 468px;
+        }
+
+        @media screen and (max-width: 1050px){
+            height: 215px;
+        }
+
+        @media screen and (max-width: 1000px){
+            width: 420px;
+        }
+        
+        @media screen and (max-width: 910px){
+            width: 400px;
+        }
+
+        @media screen and (max-width: 870px){
+            width: 500px;
+        }
+
+        @media screen and (max-width: 510px){
+            width: 450px;
+        }
+
+        @media screen and (max-width: 465px){
+            width: 360px;
+        }
+
+        @media screen and (max-width: 380px){
+            width: 320px;
+        }
+
     }
 
     &__watch-image{
         width: 100px;
+
+        @media screen and (max-width: 1350px){
+            width: 150px;
+        }
+
+        @media screen and (max-width: 1050px){
+            width: 125px;
+        }
+    }
+
+    &__mouse-img{
+        @media screen and (max-width: 1050px){
+            width: 170px;
+        }
+        @media screen and (max-width: 465px){
+            width: 125px;
+        }
+    }
+
+    &__ipad-link{
+        transition: all 0.2s ease-in-out;
+    }
+
+    &__ipad-link:hover{
+        color: red;
     }
 
     &__watch-link{
@@ -153,13 +373,66 @@
     }
 
     &__all-items{
-        @include flex(flex-start, unset);
+        @include flex(flex-start, center);
         gap: 15px;
+
+        @media screen and (max-width: 1350px){
+            flex-direction: column;
+            align-items: center;
+        }
+
+        @media screen and (max-width: 1210px){
+            gap: unset;
+        }
     }
 
     &__video{
         border-radius: 15px;
         flex: 0 1 50%;
+        width: 600px;
+        height: 310px;
+
+        @media screen and (max-width: 1450px){
+            width: 530px;
+        }
+
+        @media screen and (max-width: 1350px){
+            width: 550px;
+        }
+
+        @media screen and (max-width: 1210px){
+            height: 320px;
+        }
+
+        @media screen and (max-width: 1050px){
+            width: 500px;
+        }
+
+        @media screen and (max-width: 1000px){
+            width: 460px;
+        }
+
+        @media screen and (max-width: 910px){
+            width: 450px;
+        }
+
+        @media screen and (max-width: 870px){
+            width: 500px;
+        }
+
+        @media screen and (max-width: 510px){
+            width: 460px;
+        }
+
+        // @media screen and (max-width: 510px){
+        //     width: 360px;
+        //     height: 200px;
+        // }
+
+        @media screen and (max-width: 465px){
+            width: 320px;
+            height: 200px;
+        }
     }
 
     &__ipad-content{
@@ -169,19 +442,52 @@
         width: 500px;
         padding: 15px 10px;
         border-radius: 12px;
-        // margin-top: 30px;
-        // margin-bottom: 30px;
-        // padding-bottom: 50px;
+        @media screen and (max-width: 1350px){
+            width: 600px;
+        }
 
+        @media screen and (max-width: 1210px){
+            width: 470px;
+            height: 320px;
+        }
+
+        @media screen and (max-width: 1000px){
+            width: 420px;
+        }
+
+        @media screen and (max-width: 910px){
+            width: 400px;
+        }
+
+        @media screen and (max-width: 870px){
+            width: 500px;
+        }
+
+        @media screen and (max-width: 510px){
+            width: 460px;
+        }
+
+        @media screen and (max-width: 465px){
+            width: 360px;
+            height: 250px;
+        }
+
+        @media screen and (max-width: 380px){
+            width: 330px;
+            height: 250px;
+        }
     }
 
     &__ipad-image{
         width: 200px;
         height: 100%;
         object-fit: contain;
+
+        @media screen and (max-width: 380px){
+            width: 140px;
+        }
     }
 
-    
     &__watch-link{
         width: 400px;
         color: #111;
@@ -197,26 +503,53 @@
         
     }
 
-    &__title{
-        @include flex(center, unset);
-        flex-direction: column;
+    &__title-link{
+        transition: all 0.2s ease-in-out;
+    }
+
+    &__title-link:hover{
+        color: red;
     }
 
     &__flex{
         @include flex(flex-start, unset);
         gap: 10px;
+
+        @media screen and (max-width: 380px){
+            gap: 3px;
+        }
     }
 
     &__ipad-buttons{
         @include flex(flex-start, center);
         gap: 10px;
         margin-top: 100px;
+
+        @media screen and (max-width: 465px){
+            margin-top: 30px;
+        }
     }
 
-    &__b{
+    &__video-row{
         @include flex(center, space-between);
         gap: 10px;
         margin-bottom: 20px;
+
+        @media screen and (max-width: 1450px){
+            justify-content: unset;
+        }
+
+        @media screen and (max-width: 1350px){
+            justify-content: center;
+        }
+
+        @media screen and (max-width: 1210px){
+            gap: 15px;
+        }
+
+        @media screen and (max-width: 870px){
+            flex-direction: column;
+        }
     }
 
     &__text-button{
@@ -224,5 +557,28 @@
         padding: 8px;
         font-size: 15px;
         border-radius: 8px;
+        width: 100%;
+        color: red;
+        transition: all 0.2s ease-in-out;
+    }
+
+    &__text-button:hover{
+        background-color: #ffeff2;
+    }
+
+    &__ipad-image{
+        @media screen and (max-width: 908px){
+            width: 150px;
+        }
+    }
+
+    &__mouse-link{
+        @media screen and (max-width: 910px){
+            font-size: 14px;           
+        }
+
+        @media screen and (max-width: 465px){
+            font-size: 12px;           
+        }
     }
 }

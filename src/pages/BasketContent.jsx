@@ -1,4 +1,7 @@
 import React from 'react'
+import TrashIcon from '../assets/icons/TrasIcon'
+import LikeIconGray from '../assets/icons/LikeIconGray'
+
 
 function BasketContent() {
   return (
@@ -16,11 +19,14 @@ function BasketContent() {
                         <p className="basket__items-subtitle">SofiTex</p>
                         <div className="basket__items-buttons">
                             <a href='' className="basket__items-button">
-                            В избранное
+                            <div className="basket__items-text">В избранное</div>
+                            <div className="basket__items-icon"><LikeIconGray/></div>
                             </a>
                             <a href='' className="basket__items-button border">
-                            Удалить
+                            <div className="basket__items-text">Удалить</div>
+                            <div className="basket__items-icon"><TrashIcon></TrashIcon></div>
                             </a>
+
                         </div>
                     </div>
                     </div>
@@ -42,11 +48,14 @@ function BasketContent() {
                         <p className="basket__items-subtitle">SofiTex</p>
                         <div className="basket__items-buttons">
                             <a href='' className="basket__items-button">
-                            В избранное
+                            <div className="basket__items-text">В избранное</div>
+                            <div className="basket__items-icon"><LikeIconGray/></div>
                             </a>
                             <a href='' className="basket__items-button border">
-                            Удалить
+                            <div className="basket__items-text">Удалить</div>
+                            <div className="basket__items-icon"><TrashIcon></TrashIcon></div>
                             </a>
+
                         </div>
                     </div>
                     </div>
@@ -124,6 +133,7 @@ function BasketContent() {
                 </div>
                     <form className="basket__form">
                         <input type="number" className='basket__input'/>
+
                         <button className='basket__button'>Применить</button>
                     </form>
                 </div>

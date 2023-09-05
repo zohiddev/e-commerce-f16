@@ -11,12 +11,10 @@ function MineSliders() {
   return (
     <>
     <MineSlider />
-    <MineSliderTwo />
-    <MineSliderThree />
-    <MineSliderFour />
-    <MineSliderFive />
-    {/* <MineSliderSix /> */}
-    
+    {/* <MineSliderTwo /> */}
+    {/* <MineSliderThree /> */}
+    {/* <MineSliderFour /> */}
+    {/* <MineSliderFive /> */}
     </>
   )
 }
