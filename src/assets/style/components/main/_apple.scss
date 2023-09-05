@@ -2,8 +2,6 @@
 
     &__all{
         @include flex(center, center);
-        // flex-direction: row;
-        // gap: 330px;
         background-color: #f2f2f2;
     }
 
@@ -37,6 +35,13 @@
         }
     }
 
+    &-mouse__content{
+
+        @media screen and (max-width: 1350px){
+            @include flex(center, center)
+        }
+    }
+
     &__card:hover{
         transform: translateY(-10px);
         cursor: pointer;
@@ -49,6 +54,10 @@
         width: 100%;
         margin-top: 10px;
         margin-bottom: 30px;
+
+        @media screen and (max-width: 460px){
+            font-size: 16px;           
+        }
     }
 
     &__subtitle{
@@ -83,10 +92,16 @@
         order: 3;
         padding: 4px 8px;
         white-space: nowrap;
-        //@include flex(center, center);
         width: 150px;
 
-        @media screen and (max-width: 380px){
+        @media screen and (max-width: 460px){
+            width: 110px;
+            font-size: 10px;
+        }
+    }
+
+    &-image{
+        @media screen and (max-width: 460px){
             width: 140px;
         }
     }
@@ -111,6 +126,16 @@
         border-radius: 8px;
         transition: all 0.2s ease-in-out;
         color: red;
+        width: 100%;
+
+        @media screen and (max-width: 465px){
+            width: 137px;
+        }
+
+        @media screen and (max-width: 460px){
+            width: 110px;
+            font-size: 12px;
+        }
     }
 
     &__button-text:hover{
@@ -127,7 +152,7 @@
 
         @media screen and (max-width: 940px){
             flex-wrap: wrap;
-            justify-content: center6;
+            justify-content: center;
         }
     }
 
@@ -175,7 +200,7 @@
         width: 300px;
         padding: 50px 0;
         border-radius: 12px;
-        @include flex(flex-start, center);
+        @include flex(flex-start center);
         transition: all 0.2s ease-in-out;
 
         @media screen and (max-width: 1350px){
@@ -188,12 +213,12 @@
             gap: 100px;
         }
 
-        @media screen and (max-width: 1000px){
-            gap: 60px;
+        @media screen and (max-width: 1060px){
+            gap: 30px;
         }
        
         @media screen and (max-width: 910px){
-            gap: 50px;
+            gap: 25px;
         }
 
         @media screen and (max-width: 870px){
@@ -204,12 +229,12 @@
             gap: 60px;
         }
 
-        @media screen and (max-width: 465px){
-            width: 350px;
-        }
+        // @media screen and (max-width: 465px){
+        //     width: 350px;
+        // }
 
         @media screen and (max-width: 467px){
-            width: 350px;
+            width: 100%;
             gap: 2px;
         }
 
@@ -254,19 +279,6 @@
 
     &__watch:hover{
         transform: translateY(-10px);
-    }
-
-    &__button-text{
-        width: 100%;
-
-        @media screen and (max-width: 465px){
-            width: 137px;
-        }
-
-        @media screen and (max-width: 380px){
-            font-size: 12px;
-            width: 110px;
-        }
     }
 
     &__watch-content{   
@@ -424,11 +436,6 @@
             width: 460px;
         }
 
-        // @media screen and (max-width: 510px){
-        //     width: 360px;
-        //     height: 200px;
-        // }
-
         @media screen and (max-width: 465px){
             width: 320px;
             height: 200px;
@@ -579,6 +586,16 @@
 
         @media screen and (max-width: 465px){
             font-size: 12px;           
+        }
+
+        @media screen and (max-width: 390px){
+            font-size: 10px;           
+        }
+    }
+
+    &__icons svg {
+        @media screen and (max-width: 460px){
+            width: 20px;
         }
     }
 }

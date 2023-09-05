@@ -43,13 +43,14 @@ const Header = () => {
         setOpen(false)
     }
 
+
     return (
         <header className='header'>
             <div className="container">
                 <div className="header__wrapper">
                     <a href="/" className="header__logo">
                         <span className='header__logo__icon'><PhoneIcon /></span>
-                        <MainLogo />
+                            <MainLogo />
                         <span className='header__logo__nothing'></span>
                     </a>
                     <div className="header__info">
@@ -91,31 +92,27 @@ const Header = () => {
                             <span className="header-buttons__icon">
                                 <ProfileIcon />
                             </span>
-                            <span>Kirish</span>
-
+                            <span>Kirish</span> 
                         </button>
-
-
                     </div>
                 </div>
 
             </div>
-            <div className="modal-wrapper">
-                <div className={open ? 'modal show' : 'modal hide'}>
+            <div  className={open ? 'modal-wrapper show' : 'modal-wrapper hide'}>
+                <div className='modal'>
                     <div className="modal-content">
+                    <div className='modal-close'>
+                        <button onClick={() => closeModal()} className='modal-close__icon'>
+                            <CloseIcon />
+                        </button>
+                    </div>
                         <h1 className='modal-title'>Tizimga kirish yoki profil yaratish</h1>
                         <p className='modal-number'>Telefon raqami</p>
                         <div className="modal-region">
                             <p className='modal-region__value'>+998 <BottomArrow /> </p>
-                            <input className='modal-phone' min={2} maxLength={5} type="number" max={2} />
+                            <input className='modal-phone'  maxLength={9} type="number"/>
                         </div>
                         <button className='modal-confirmation'>Tasdiqlash</button>
-                    </div>
-                    <div className='modal-close'>
-                        <button onClick={() => closeModal()} className='modal-close__icon'>
-                            <CloseIcon />
-
-                        </button>
                     </div>
                 </div>
 

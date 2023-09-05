@@ -18,7 +18,7 @@ function SidebarSlide() {
           <SwiperSlide className='swiper-card' key={item.id}>
             <div className='swiper-card__info'>
               <div>
-                <img src={item.img} className='swiper__img' alt="" />
+                <img src={item.img} className='swiper__img' alt={item.name} />
               </div>
               <div className='card-items'>
                 <a href="#">

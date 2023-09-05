@@ -1,4 +1,4 @@
-import MainSliderImgOne from '../assets/images/sliderImg1.png'
+import MainSliderImgOne from '../assets/images/sliderImg1.jpg'
 
 export const miniSwiperData = [
     {

@@ -1,28 +1,35 @@
 .modal{
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    // height: 100vh;
-    // position: fixed;
-    position: absolute;
-    // width: 60%;
-    top: 100px;
-    // z-index: -1;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.2s ease-in-out;
-
-    &.show{
-        opacity: 1;
-        visibility: visible;
-        z-index: 999999;
-        transition: all 0.2s ease-in-out;
- 
+    margin-top: 150px;    
+    @media screen and (max-width: 450px){
+        width: 100%;
+        padding: 0 10px;
     }
 
-    
+    &-wrapper{
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(0,0,0,0.4);
+        transition: all 0.2s ease-in-out;
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    &-wrapper.show{
+        opacity: 1;
+        visibility: visible;
+        z-index: 99999999999999;
+        transition: all 0.2s ease-in-out;
+    }
+
     &-content{
-        padding: 37px 25px;
+        padding: 17px 25px 30px 25px;
         background-color: #fff;
         border-radius: 8px;
     }
@@ -71,6 +78,16 @@
         padding-right: 35px;
         width: 350px;
         margin-bottom: 40px;
+
+        @media screen and (max-width: 400px){
+            font-size: 25px;
+            width: 100%;
+        }
+
+        @media screen and (max-width: 330px){
+            font-size: 20px;
+            line-height: 27px;
+        }
     }
 
     &-number{
@@ -91,38 +108,20 @@
         font-weight: 500;
         transition: all 0.2s ease-in-out;
         opacity: 0.5;
+        cursor: no-drop;
     }
 
-    &-confirmation:hover{
-        background-color: transparent;
-        color: #da002b;
-    }
+    // &-confirmation:hover{
+    //     background-color: transparent;
+    //     color: #da002b;
+    // }
 
-    &-close{
-        position: relative;
-    }
 
     &-close__icon{
-        position: absolute;
-        left: -38px;
-        top: 10px;
         transform: scale(1.4);
     }
+
+   &-close{
+        @include flex(center, end)
+   }
 }
-
-
-.modal-wrapper{
-    @include flex(center, center);
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    
-}
-
-// .header-black{
-//     backdrop-filter: blur(8px);
-//     background: rgba(0, 0, 0, 0.5);
-//     opacity: 0.3;
-//     z-index: 999;
-//     height: 100vh;
-// }
