@@ -5,7 +5,6 @@ import AppleBacket from '../../assets/icons/AppleBacket';
 import LikeIconGray from '../../assets/icons/LikeIconGray';
 import ProfileIconGray from '../../assets/icons/ProfileIconGray';
 import { Link } from "react-router-dom"
-import BasketContent from '../../pages/BasketContent';
 
 
 function AppleCards() {
