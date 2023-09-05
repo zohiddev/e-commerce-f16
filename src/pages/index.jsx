@@ -11,7 +11,7 @@ const Home = () => {
   return (
     <main className='main'>
       <MainSwiper />
-      {/* <AppleCards /> */}
+      <AppleCards />
       <MineSliders />
       <Brands />
       <LinkImages />
