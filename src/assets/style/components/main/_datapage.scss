@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;600&display=swap');
+
+.datapage{
+    margin-top: 36px;
+    &_title{
+        font-size: 42px;
+        font-weight: 600;
+        font-family: 'Raleway',sans-serif;
+        @media screen and (max-width: 810px) {
+            font-size: 34px;
+        }
+        @media screen and (max-width: 770px) {
+            font-size: 24px;
+        }
+    }
+    &_product-information{
+        margin-top: 32px;
+        &_menu-content{
+            &-title{
+                font-size: 18px;
+                font-family: 'Raleway',sans-serif;
+                font-weight: 700;
+                margin: 24px 0;
+                line-height: 24px;
+            }
+            &-subtitle{
+                color: #999;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 20px;
+                margin-bottom: 8px;
+            }
+        }
+    }
+}
+.hover-writing{
+    cursor: pointer;
+}
+.hover-writing:hover{
+    color: red;
+    transition: all 0.3s ease-in-out;
+}
