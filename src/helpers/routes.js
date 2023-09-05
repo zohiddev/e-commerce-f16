@@ -3,7 +3,7 @@ import BasketContent from "../pages/BasketContent";
 import CompareProducts from "../pages/CompareProducts";
 import FovoritePage from "../pages/FovoritePage";
 import ProductItem from "../pages/ProductItem";
-import ApplePage from "../pages/ApplePage";
+// import ApplePage from "../pages/ApplePage";
 import NotePage from "../pages/NotePage";
 
 export const routes = [
@@ -19,10 +19,10 @@ export const routes = [
         path: "/product/:id",
         element: ProductItem
     },
-    {
-        path: "/apple",
-        element: ApplePage
-    },
+    // {
+    //     path: "/apple",
+    //     element: ApplePage
+    // },
     {
         path: "/fovorite",
         element: FovoritePage

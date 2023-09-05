@@ -1,35 +1,29 @@
 import React from 'react'
-import { notesProduct1to2, notesProduct3to4, notesProduct5to6, notesProduct7to8 } from '../../utils/data'
+import { notesProduct1to2, notesProduct3to4, notesProduct5to6, notesProduct7to8 } from '../../../data/notes'
 import NoteCard from './NoteCard'
 
 function NotesCards() {
 
     return (
-        <div className='notes__section'>
-            <div className="notes__title-body container">
+        <section className='notes__section'>
+            <div className="container scale">
                 <h1 className='notes__title'>Наша подборка для вас</h1>
             </div>
-            <div className="notes container">
+            <div className="container notes">
                 <div className="notes__div">
                     <div className="notes__items-div">
                         {notesProduct1to2.map((item) => (
                             <NoteCard
-                                key={item.key}
-                                id={item.id}
-                                title={item.title}
-                                img={item.img}
-                                credit={item.credit}
+                            key={item.id}
+                            item={item}
                             />
                         ))}
                     </div>
                     <div className="notes__items-div">
                         {notesProduct3to4.map((item) => (
                             <NoteCard
-                                key={item.key}
-                                id={item.id}
-                                title={item.title}
-                                img={item.img}
-                                credit={item.credit}
+                            key={item.id}
+                            item={item}
                             />
                         ))}
                     </div>
@@ -38,28 +32,22 @@ function NotesCards() {
                     <div className="notes__items-div">
                         {notesProduct5to6.map((item) => (
                             <NoteCard
-                                key={item.key}
-                                id={item.id}
-                                title={item.title}
-                                img={item.img}
-                                credit={item.credit}
+                            key={item.id}
+                            item={item}
                             />
                         ))}
                     </div>
                     <div className="notes__items-div">
                         {notesProduct7to8.map((item) => (
                             <NoteCard
-                                key={item.key}
-                                id={item.id}
-                                title={item.title}
-                                img={item.img}
-                                credit={item.credit}
+                                key={item.id}
+                                item={item}
                             />
                         ))}
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 
