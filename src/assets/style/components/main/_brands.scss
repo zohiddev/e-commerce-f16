@@ -29,9 +29,9 @@
         @include flex();
         gap: 10px;
         width: 150px;
+        transition: all 0.3s ease-in-out;
     }
     &_a, a:hover{
-        transition: all 0.3s ease-in-out;
         color: rgba(255, 0, 0, 0.612);
     }
     &__products{
@@ -82,8 +82,11 @@
             justify-content: space-around;
             align-items: end;
             height: 180px;
-            &_imgs:hover{
+            &_imgs{
+
                 transition: all 0.3s ease-in-out;
+            }
+            &_imgs:hover{
                 transform: scale(1.09)
             }
             @media screen and (max-width: 970px){
