@@ -1,8 +1,9 @@
-.all{
-    display: none;
-}
+
 .images,.images-xl{
+    @include flex (center,center);
+    gap: 5px;
     margin-top: 80px;
+    margin-bottom: 80px;
     @include flex(center,space-evenly);
     @media screen and (max-width:1025px){
         @include flex(center,space-evenly);
@@ -193,6 +194,7 @@
         position: absolute;
         left: 0;
         top: 0;
+        transition: all 300ms ease-in-out;
         @media screen and (max-width:600px){
             height: 104px;
             object-fit: cover;
@@ -212,6 +214,7 @@
         position: absolute;
         left: 0;
         top: 0;
+        transition: all 300ms ease-in-out;
         @media screen and (max-width:1025px){
             height: 300px;
         }
@@ -244,6 +247,10 @@
         }
     }
 
+    .scale{
+        transition: all 300ms ease-in-out;
+    }
+
     &__image-l{
         width: 100%;
         height: 444px;
@@ -251,6 +258,7 @@
         position: absolute;
         left: 0;
         top: 0;
+        transition: all 300ms ease-in-out;
         @media screen and (max-width:1025px){
             width: 100%;
             max-width:968px;
@@ -276,6 +284,7 @@
     position: absolute;
     left: 0;
     bottom: 0;
+    transition: all 300ms ease-in-out;
     // @media screen and (max-width:1025px){
     //     width: 100%;
     //     top: -1150%;
@@ -300,23 +309,19 @@
 }
 
     .images__image:hover{
-        transform: scale(1.015);
-        transition: all 300ms ease-in-out;
-        border-radius: 20px;
+        transform: scale(1.020);
+        border-radius: 12px;
     }
-    .images__image-xl:hover{
-        transform: scale(1.015);
-        transition: all 300ms ease-in-out;
-        border-radius: 20px;
+    .scale:hover{
+        transform: scale(1.020);
+        border-radius: 12px;
     }
     .images__image-l:hover{
-        transform: scale(1.015);
-        transition: all 300ms ease-in-out;
-        border-radius: 20px;
+        transform: scale(1.020);
+        border-radius: 12px;
     }
     .images__image-xl-horizontal:hover{
-        transform: scale(1.015);
-        transition: all 300ms ease-in-out;
-        border-radius: 20px;
+        transform: scale(1.020);
+        border-radius: 12px;
     }
 }

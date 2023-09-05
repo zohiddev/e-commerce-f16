@@ -13,7 +13,7 @@ function ApplePanel(props) {
             <div className="apple__content">
                 <img className='apple__products-img' src={props.img} alt="" />
                 <div className='apple__items'>
-                    <Link to="/apple" className='app__title'>{props.title}</Link>
+                    <a href='#' className='app__title'>{props.title}</a>
 
                     <p className='apple__subtitle'>{props.subtitle}</p>
                     <p className='apple__kredit'>{props.kredit}</p>
