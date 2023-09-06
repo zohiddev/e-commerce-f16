@@ -10,7 +10,6 @@ const Home = () => {
   return (
     <main className='main'>
       <MainSwiper />
-      <AppleCards />
       <MineSliders />
       <Brands />
       <LinkImages />
