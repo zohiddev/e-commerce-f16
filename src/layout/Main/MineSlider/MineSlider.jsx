@@ -12,7 +12,7 @@ export default function MineSlider() {
       <div className="container">
         <Swiper
           spaceBetween={12}
-          slidesPerView={1}
+          slidesPerView={10.350}
           navigation={true}
           pagination={false}
           history={{
