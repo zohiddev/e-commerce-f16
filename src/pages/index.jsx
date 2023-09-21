@@ -10,10 +10,11 @@ const Home = () => {
   return (
     <main className='main'>
       <MainSwiper />
-      <MineSliders />
+      {/* <AppleCards /> */}
+      {/* <MineSliders />
       <Brands />
       <LinkImages />
-      <NotesCards />
+      <NotesCards /> */}
       <Products />
     </main>
   )

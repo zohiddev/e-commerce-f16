@@ -6,19 +6,22 @@ import CompareIcon from '../../assets/icons/CompareIcon'
 import LikeIcon from '../../assets/icons/LikeIcon'
 import BascetIcon from '../../assets/icons/BascetIcon'
 import ProfileIcon from '../../assets/icons/ProfileIcon'
-import { categoryData } from '../../data/category'
 import HomeIcon from '../../assets/icons/HomeIcon'
 import CategorySearch from '../../assets/icons/CategorySearch'
 import PhoneIcon from '../../assets/icons/PhoneIcon'
 import BottomArrow from '../../assets/icons/BottomArrow'
 import CloseIcon from '../../assets/icons/CloseIcon'
 import { Link } from 'react-router-dom'
-
-
+import axios from 'axios'
+import { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { setCategories, setLoading } from '../../redux/slices/CategorySlice'
 
 const Header = () => {
-    const [activeCategory, setActiveCategory] = useState(1)
+    const [activeCategory, setActiveCategory] = useState(413)
     const [isOpen, setIsOpen] = useState(false);
+    const {items, loading} = useSelector(state => state.categories)
+    const dispatch = useDispatch()
 
 
     const handleSidebarToggle = () => {
@@ -43,16 +46,28 @@ const Header = () => {
         setOpen(false)
     }
 
+    
+
+    useEffect(() => {
+        dispatch(setLoading(true))
+        axios.get('https://ecommerce.main-gate.appx.uz/dev/v1/category/list').then(function(response){
+            dispatch(setCategories(response.data.categories))
+            dispatch(setLoading(false))
+        }).catch(function(error){
+            console.log(error)
+        })
+    }, [])
+
 
     return (
         <header className='header'>
             <div className="container">
                 <div className="header__wrapper">
-                    <a href="/" className="header__logo">
+                    <Link to="/" className="header__logo">
                         <span className='header__logo__icon'><PhoneIcon /></span>
                             <MainLogo />
                         <span className='header__logo__nothing'></span>
-                    </a>
+                    </Link>
                     <div className="header__info">
                         <div className="header__catalog header-catalog">
                             <button className='header-catalog__button' onClick={handleSidebarToggle}>
@@ -126,8 +141,9 @@ const Header = () => {
                                 <button className="header__dropdown__nav_icon" onClick={closeSidebar}>X</button>
                             </div>
                             {
-                                categoryData.map(item => (
+                                loading ? <h1>Loading....</h1> : items.map((item, key) => (
                                     <a
+                                    key={key}
                                         // href={item.path} 
                                         className="header__dropdown__link"
                                         onMouseEnter={() => handleActiveCategory(item.id)}
@@ -140,12 +156,12 @@ const Header = () => {
                         </div>
                         <div className="header__dropdown__info">
                             {
-                                categoryData.find(item => item.id === activeCategory).children.map(subItem => (
-                                    <div className="tv__panel__item">
+                                loading ? <h1>Loading...</h1> : items.find(item => item.id === activeCategory)?.children?.map((subItem, key) => (
+                                    <div className="tv__panel__item" key={key}>
                                         <p className="tv__panel__item__title">{subItem.name_uz}</p>
                                         {
-                                            subItem.children.map(el => (
-                                                <a className="tv__panel__item__link">{el.name_uz}</a>
+                                            subItem.children.map((el, i) => (
+                                                <a className="tv__panel__item__link" key={i}>{el.name_uz}</a>
                                             ))
                                         }
                                     </div>

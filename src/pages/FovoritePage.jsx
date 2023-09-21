@@ -1,6 +1,10 @@
 import React from 'react'
+import ProductItem from '../layout/Main/ProductItem'
+import { useSelector } from 'react-redux'
 
 function FovoritePage() {
+  const {favorites} = useSelector(state => state)
+  const isEmpty = favorites.items.length === 0
   return (
     <div className='personal-information__content'>
         <div className="container">
@@ -10,7 +14,11 @@ function FovoritePage() {
               </div>
               <div className=""></div>
               <div>
-              {/* < ComputerProducts /> */}
+              {
+               isEmpty ? <h1>Pustoy</h1> : favorites.items.map(item => (
+                  <ProductItem key={item.id} product={item}/>
+                ))
+              }
               </div>
              </main>
         </div>

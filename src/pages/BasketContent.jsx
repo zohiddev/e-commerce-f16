@@ -1,74 +1,57 @@
 import React from 'react'
 import TrashIcon from '../assets/icons/TrasIcon'
 import LikeIconGray from '../assets/icons/LikeIconGray'
+import { useDispatch, useSelector } from 'react-redux'
+import { decreaseItem, increaseItem, removeToCard } from '../redux/slices/CartSlice'
 
 
 function BasketContent() {
-  return (
+    const {items} = useSelector(state => state.cart)
+    const dispatch = useDispatch()
+    return (
     <div className='basket container'>
         <div className="basket__left">
             <div className="basket__items-div">
                 <h1 className="basket__items-header">
                 В корзине 2 товара
                 </h1>
-                <div className="basket__items-item">
-                    <div className="basket__items-product">
-                    <img className='basket__items-img' src="../src/assets/img/Cosmetics_first.png" alt="" />
-                    <div className="basket__items-cont">
-                        <a href='' className="basket__items-title">Стайлер Dyson HS05 EU никель/медный</a>
-                        <p className="basket__items-subtitle">SofiTex</p>
-                        <div className="basket__items-buttons">
-                            <a href='' className="basket__items-button">
-                            <div className="basket__items-text">В избранное</div>
-                            <div className="basket__items-icon"><LikeIconGray/></div>
-                            </a>
-                            <a href='' className="basket__items-button border">
-                            <div className="basket__items-text">Удалить</div>
-                            <div className="basket__items-icon"><TrashIcon></TrashIcon></div>
-                            </a>
+                {
+                 items.map(item => (
+                    <div className="basket__items-item" key={item.id}>
+                        <div className="basket__items-product">
+                        <img className='basket__items-img' src={item.img} alt={item.title} />
+                        <div className="basket__items-cont">
+                            <a href='' className="basket__items-title">{item.title}</a>
+                            {/* <p className="basket__items-subtitle">SofiTex</p> */}
+                            <div className="basket__items-buttons">
+                                <button className="basket__items-button">
+                                    <span className="basket__items-text">В избранное</span>
+                                    <span className="basket__items-icon"><LikeIconGray/></span>
+                                </button>
+                                <button className="basket__items-button border" onClick={() => dispatch(removeToCard(item.id))}>
+                                    <span className="basket__items-text">Удалить</span>
+                                    <span className="basket__items-icon"><TrashIcon /></span>
+                                </button>
 
+                            </div>
                         </div>
-                    </div>
-                    </div>
-                    <div className="basket__items-price">
-                        <div className="basket__items-count">
-                            <div className="basket__items-quantity">- 1 +</div>
-                            <div className="basket__items-prices">
-                                <div className="basket__items-price">8 238 600 сум</div>
-                                <div className="basket__items-discount">9 154 000 сум</div>
+                        </div>
+                        <div className="basket__items-price">
+                            <div className="basket__items-count">
+                                <div className="basket__items-quantity">
+                                    <button disabled={item.qty === 1} onClick={() => dispatch(decreaseItem(item.id))}>-</button>
+                                    <span>{item.qty}</span>
+                                    <button onClick={() => dispatch(increaseItem(item.id))}>+</button>
+                                </div>
+                                <div className="basket__items-prices">
+                                    <div className="basket__items-price">{item.lastpayment}</div>
+                                    <div className="basket__items-discount">{item.paymment}</div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className="basket__items-item">
-                    <div className="basket__items-product">
-                    <img className='basket__items-img' src="../src/assets/img/Cosmetics_first.png" alt="" />
-                    <div className="basket__items-cont">
-                        <a href='' className="basket__items-title">Стайлер Dyson HS05 EU никель/медный</a>
-                        <p className="basket__items-subtitle">SofiTex</p>
-                        <div className="basket__items-buttons">
-                            <a href='' className="basket__items-button">
-                            <div className="basket__items-text">В избранное</div>
-                            <div className="basket__items-icon"><LikeIconGray/></div>
-                            </a>
-                            <a href='' className="basket__items-button border">
-                            <div className="basket__items-text">Удалить</div>
-                            <div className="basket__items-icon"><TrashIcon></TrashIcon></div>
-                            </a>
-
-                        </div>
-                    </div>
-                    </div>
-                    <div className="basket__items-price">
-                        <div className="basket__items-count">
-                            <div className="basket__items-quantity">- 1 +</div>
-                            <div className="basket__items-prices">
-                                <div className="basket__items-price">8 238 600 сум</div>
-                                <div className="basket__items-discount">9 154 000 сум</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    ))
+                }
             </div>
             <div className="basket__data">
                 <div className="basket__items-header">

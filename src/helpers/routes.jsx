@@ -9,15 +9,15 @@ import NotePage from "../pages/NotePage";
 export const routes = [
     {
         path: "/",
-        element: Home
+        element: <Home/>
     },
     {
         path: "/compare",
-        element: CompareProducts
+        element: <CompareProducts/>
     },
     {
-        path: "/product/:id",
-        element: ProductItem
+        path: "/product/:slug",
+        element: <ProductItem/>
     },
     // {
     //     path: "/apple",
@@ -25,15 +25,15 @@ export const routes = [
     // },
     {
         path: "/fovorite",
-        element: FovoritePage
+        element: <FovoritePage/>
     },
     {
         path: "/basket",
-        element: BasketContent
+        element: <BasketContent/>
     },
     {
         path: "/note",
-        element: NotePage
+        element: <NotePage/>
 
     }
 ]

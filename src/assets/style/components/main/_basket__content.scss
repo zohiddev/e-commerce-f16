@@ -296,8 +296,9 @@
         height: 40px;
         line-height: 24px;
         text-align: center;
+        padding: 0 12px;
         width: 100%;
-        @include flex (center,center);
+        @include flex (center,space-between);
         min-width: 120px;
         @media screen and (max-width:1200px){
             max-width: 120px;
@@ -305,6 +306,11 @@
             right: 15%;
             bottom: 7%;
         }
+
+        button{
+            font-size: 32px;
+        }
+
         @media screen and (max-width:675px){
             right: 20%;
         }

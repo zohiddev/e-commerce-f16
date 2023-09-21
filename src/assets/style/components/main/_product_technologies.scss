@@ -1,275 +1,116 @@
-.noutbuk_first{ 
-  display: flex; 
-  flex-direction: column; 
-  @include wihe(256px, 411px); 
-  padding: 16px; 
-  &_image{ 
-    display: flex; 
-    cursor: pointer;  
- 
- 
-    &_compare{ 
- 
-      &.active{ 
-        transition: all .3s ease 0s; 
- 
-        & path{ 
-          fill: #DA002B; 
-        } 
-      } 
-    } 
- 
-    &_heart{ 
- 
- 
-      &.active{ 
-        transition: all .3s ease 0s; 
- 
-        & path{ 
-          fill: #DA002B; 
-          stroke: #DA002B; 
-        } 
-      } 
-    } 
- 
-    &_discount{ 
- 
- 
-      &_title{ 
-        background-color: #DA002B; 
-        color: #fff; 
-        padding: 5px; 
-        border-radius: 8px; 
-      } 
-    } 
- 
-    &_image{ 
- 
-      &_image{ 
-        @include wihe(200px,150px) 
-      } 
-    } 
- 
-    &_icons{ 
-      display: flex; 
-      flex-direction: column; 
-      gap: 20px; 
- 
-    } 
-  } 
- 
-  &_texts{ 
-    display: flex; 
-    flex-direction: column; 
-    margin-top: 20px; 
-    cursor: pointer; 
- 
-    &_title{ 
-      color: #111; 
-      font-family: Raleway; 
-      font-size: 16px; 
-      font-style: normal; 
-      font-weight: 500; 
-      line-height: 24px; 
-      width: 80%; 
-    } 
-    &_lastpayment{ 
-      color: #999; 
-      font-family: Raleway; 
-      font-size: 14px; 
-      font-style: normal; 
-      font-weight: 500; 
-      line-height: 20px; 
-      text-decoration-line: strikethrough; 
-      text-decoration: line-through; 
-    } 
-    &_payment{ 
-      color: #DA002B; 
-      font-family: Raleway; 
-      font-size: 18px; 
-      font-style: normal; 
-      font-weight: 700; 
-      line-height: 24px; 
-      margin-top: 5px; 
-    } 
-    &_credit{ 
-      color: #111; 
-      font-family: Raleway; 
-      font-size: 12px; 
-      font-style: normal; 
-      font-weight: 600; 
-      line-height: 16px; 
-      margin-top: 8px; 
-      &_title{ 
-        padding: 3px 8px; 
-        background-color: #FFD740; 
-        border-radius: 6px; 
-      } 
-    } 
-  } 
-  &_buttons{ 
-    margin-top: auto; 
-    @include flex(center, unset); 
- 
- 
-    &_minus{ 
-      @include wihe(36px, unset); 
-    } 
- 
-    &_plus{ 
-      @include wihe(36px, unset); 
-      color: red; 
-    } 
- 
- 
-    &_count{ 
-      display: none; 
- 
- 
-      &.open{ 
-        @include flex(center,space-between); 
-        @include wihe(230px,36px); 
-        padding: 0 ; 
-        border-radius: 8px; 
-        background-color: #fff; 
-        border: 2px solid #111;   
-        position: absolute; 
-        z-index: 5; 
-      } 
- 
- 
-      &_value{ 
-        font-size: 16px; 
-        font-weight: 500; 
-        height: 36px; 
-        line-height: 24px; 
-        min-height: 36px; 
-        padding: 6px 0; 
-        text-align: center; 
-      } 
-    } 
- 
- 
-    &_magazine{ 
-      @include flex(center, center); 
-      @include wihe(unset, 36px); 
-      padding: 10px; 
-      border-radius: 8px; 
-      border: 2px solid #111; 
-      margin-right: 10px 
-    } 
- 
- 
-    &_book{ 
-      @include flex(center, center); 
-      @include wihe(245px, 36px); 
-      font-size: 16px; 
-      line-height: 20px; 
-      border-radius: 8px; 
-      border: 2px solid #DA002B; 
-      color: #DA002B; 
- 
-      &.close{ 
-        display: none; 
-      } 
-    } 
- 
-     
-  } 
- 
-  &_row{ 
-    display: flex; 
-    width: 100%; 
-    flex-wrap: wrap; 
-    gap: 36px; 
-    margin: 0; 
- 
-  } 
-} 
- 
-.noutbuk{ 
-  &__content{ 
-    @include wihe(100%, unset) 
-  } 
-} 
- 
-.popup{ 
-  opacity: 0; 
-  visibility: hidden; 
-  position: absolute; 
-  right: 100%; 
-  transition: all 0.3s ease-in-out; 
- 
-  &.open{ 
-    position: absolute; 
-    top: 30px; 
-    right: 30px; 
-    opacity: 1; 
-    visibility: visible; 
- 
-  } 
- 
-  &_row{ 
-    @include flex(start,start); 
-    gap: 13px; 
-    animation: notify 4s ease-in-out 1; 
-    background-color: #fff; 
-    border: 2px solid #12bf6c; 
-    border-radius: 12px; 
-    box-shadow: 0 3px 10px #a2a2a22d; 
-    max-width: 300px; 
-    padding: 16px; 
-    position: fixed; 
-    right: 20px; 
-    top: 20px; 
-    transform-origin: right; 
-    z-index: 1000; 
-  } 
- 
-  &_icon{ 
-    @include wihe(40px,30px); 
-    @include flex(start,center); 
-    border: 2px solid #12bf6c;
-    background-color: transparent; 
-    border-radius: 8px; 
-  } 
- 
-  &_button{ 
-    @include flex(center,center); 
-    background: #12bf6c; 
-    color: #fff; 
-    border-radius: 8px; 
-    display: inline-flex; 
-    font-size: 14px; 
-    font-weight: 500; 
-    line-height: 20px; 
-    min-height: 36px; 
-    padding: 6px 20px; 
-    white-space: nowrap; 
-    margin-top: 8px; 
-    transition: .3s cubic-bezier(.4,0,.2,1); 
-    border: 2px solid #12bf6c; 
- 
- 
-    &:hover{ 
-      background-color: transparent; 
-      border: 2px solid #12bf6c; 
-      color: #12bf6c; 
-    } 
-  } 
- 
-  &_text{ 
-    color: #111; 
-    font-size: 16px; 
-    font-weight: 500; 
-    line-height: 24px; 
-  } 
- 
-  &_close{ 
-    position: absolute; 
-    top: 5px; 
-    right: 5px; 
-    cursor: pointer; 
-  } 
- 
+.noutbuk_first{
+  display: flex;
+  flex-direction: column;
+  @include wihe(256px, 411px);
+  padding: 16px;
+  &_image{
+    display: flex;
+    &_discount{
+
+
+      &_title{
+        background-color: #DA002B;
+        color: #fff;
+        padding: 5px;
+        border-radius: 8px;
+      }
+    }
+    &_image{
+      &_image{
+        @include wihe(200px,150px)
+      }
+    }
+    &_icons{
+      display: flex;
+      flex-direction: column;
+      &_heart{
+        margin-bottom: 20px;
+      }
+    }
+  }
+  &_texts{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    &_title{
+      color: #111;
+      font-family: Raleway;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 24px;
+      width: 80%;
+    }
+    &_lastpayment{
+      color: #999;
+      font-family: Raleway;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 20px;
+      text-decoration-line: strikethrough;
+      text-decoration: line-through;
+    }
+    &_payment{
+      color: #DA002B;
+      font-family: Raleway;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 24px;
+      margin-top: 5px;
+    }
+    &_credit{
+      color: #111;
+      font-family: Raleway;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 16px;
+      margin-top: 8px;
+      &_title{
+        padding: 3px 8px;
+        background-color: #FFD740;
+        border-radius: 6px;
+      }
+    }
+  }
+  &_buttons{
+    display: flex;
+    margin-top: auto;
+    @include flex(center, unset);
+    &_magazine{
+      @include flex(center, center);
+      @include wihe(unset, 36px);
+      padding: 10px;
+      border-radius: 8px;
+      border: 2px solid #111;
+      margin-right: 10px
+    }
+    &_book{
+      @include flex(center, center);
+      @include wihe(unset, 36px);
+      font-size: 12px;
+      line-height: 20px;
+      padding: 10px 55.4px 10px 55.6px;
+      border-radius: 8px;
+      border: 2px solid #DA002B;
+      color: #DA002B;
+    }
+  }
+
+  &_row{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 26px;
+    margin: 0;
+
+  }
+}
+
+.noutbuk{
+  &__content{
+    @include wihe(100%, unset)
+  }
 }

@@ -7,14 +7,25 @@ import { mainSwiperData } from '../../data/swiperData';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import EventsService from '../../redux/services/EventsService';
 
 function Mainswiper() {
+  const {items, loading} = useSelector(state => state.events)
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch(EventsService())
+  }, [])
 
   return (
     <section className='main-swiper'>
       <div className="container">
         <div className="swiper-content">
-          <Swiper
+          
+          {
+            loading ? <h1>Loading....</h1> : <Swiper
             slidesPerView={1}
             spaceBetween={30}
             loop={true}
@@ -30,13 +41,14 @@ function Mainswiper() {
             className="main-mySwiper"
           >
             {
-              mainSwiperData.map((item) => (
+              items.map((item) => (
                 <SwiperSlide>
-                  <img src={item.img} key={item.id} className='swiper-main__img' alt={item.name} />
+                  <img src={item.image} key={item.id} className='swiper-main__img' alt={item.title_uz} />
                 </SwiperSlide>
               ))
             }
           </Swiper>
+          }
 
           <div className="swiper__advertising">
             <div className="swiper__items">
