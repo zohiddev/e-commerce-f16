@@ -1,11 +1,12 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import axios from "axios";
+import Axios from "../../axios";
+import { bannerListUrl } from "../../helpers/urls";
 
 
 const EventsService = createAsyncThunk('events/get', async (_, thunkAPI) => {
-    const response = await axios.get('https://ecommerce.main-gate.appx.uz/dev/v1/events/list')
+    const response = await Axios.get(bannerListUrl)
 
-    return response.data
+    return response.data.data
 })
 
 

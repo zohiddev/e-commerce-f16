@@ -14,7 +14,8 @@ const EventsSlice = createSlice({
             state.loading = true
         },
         [EventsService.fulfilled]: (state, action) => {
-            state.items = action.payload.events
+            console.log(action)
+            state.items = action.payload.sliders
             state.loading = false
         },
         [EventsService.rejected]: (state, action) => {

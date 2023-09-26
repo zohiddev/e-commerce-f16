@@ -7,13 +7,20 @@ import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../../redux/slices/CartSlice";
 import { addFavorite, removeFavorite } from "../../redux/slices/FavoritesSlice";
 import { Link } from "react-router-dom";
+import { addComparedProducts, removeComparedProducts } from "../../redux/slices/CompareSlice";
 
 const ProductItem = ({ product }) => {
   const {favorites} = useSelector(state => state)
+  const {comparedProducts} = useSelector(state => state.compare)
   const dispatch = useDispatch()
+  const isSale = product.discount_type === '-'
 
   const checkFavorite = () => { 
     return favorites.items.some(item => item.id === product.id)
+  }
+
+  const checkCompare = () => {
+    return comparedProducts.some(item => item.id === product.id)
   }
 
   const handleFavorite = () => {
@@ -24,24 +31,39 @@ const ProductItem = ({ product }) => {
     }
   }
 
+  const handleCompare = () => {
+    if(checkCompare()){
+      dispatch(removeComparedProducts(product.id))
+    }else{
+      dispatch(addComparedProducts(product))
+    }
+  }
+
+  const calculatePercent = () => {
+    return Math.ceil((Number(product.discount_value) * 100) / product.max_price)
+  }
+
   return (
-    <Link to={`/product/${product.slug}`}>
+   
     
     <div className="noutbuk_first ">
       <div className="noutbuk_first_image">
-        <div className="noutbuk_first_image_discount">
+        {
+         isSale ? null : <div className="noutbuk_first_image_discount">
           <h1 className="noutbuk_first_image_discount_title">
             {" "}
-            {product.discount}{" "}
+            {product.discount_type === 'value' ? calculatePercent() : Number(product.discount_value)}%
           </h1>
         </div>
-        <div className="noutbuk_first_image_image">
+        }
+       <Link to={`/product/${product.alias}`}><div className="noutbuk_first_image_image">
           <img
             className="noutbuk_first_image_image_image"
-            src={product.image}
+            src={product.main_image}
             alt="noutbuk_first"
           />
         </div>
+        </Link> 
         <div className="noutbuk_first_image_icons">
           <button onClick={handleFavorite}>
             {
@@ -49,24 +71,26 @@ const ProductItem = ({ product }) => {
             }
             
           </button>
-          <CompareIconProduct />
+          <button onClick={handleCompare}>
+            {checkCompare() ? <TrashIcon className="noutbuk_first_image_icons_heart" /> : <CompareIconProduct /> } 
+          </button>
         </div>
       </div>
       <div className="noutbuk_first_texts">
         <div className="noutbuk_first_texts_title">
-          <a href="#">{product.name_uz}</a>
+        <Link to={`/product/${product.alias}`}>{product.name_uz}</Link>
         </div>
-        <div className="noutbuk_first_texts_lastpayment">
-          <a href="#">{product.previous_price}</a>
-        </div>
+        {product.max_price ?  <div className="noutbuk_first_texts_lastpayment">
+          <a href="#">{product.max_price.toLocaleString()}</a>
+        </div> : null }
         <div className="noutbuk_first_texts_payment">
-          <a href="#">{product.price}</a>
+          <a href="#">{Number(product.total_price).toLocaleString()}</a>
         </div>
-        {/* <div className="noutbuk_first_texts_credit">
+        <div className="noutbuk_first_texts_credit">
           <a className="noutbuk_first_texts_credit_title" href="#">
-            {product.credit}
+            {product.monthly_repayment.toLocaleString()} сум x {product.plan.max_period} мес
           </a>
-        </div> */}
+        </div>
       </div>
       <div className="noutbuk_first_buttons">
         <button className="noutbuk_first_buttons_magazine" 
@@ -77,7 +101,6 @@ const ProductItem = ({ product }) => {
       </div>
     </div>
 
-    </Link>
   );
 };
 

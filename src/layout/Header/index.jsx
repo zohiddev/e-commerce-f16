@@ -12,17 +12,15 @@ import PhoneIcon from '../../assets/icons/PhoneIcon'
 import BottomArrow from '../../assets/icons/BottomArrow'
 import CloseIcon from '../../assets/icons/CloseIcon'
 import { Link } from 'react-router-dom'
-import axios from 'axios'
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { setCategories, setLoading } from '../../redux/slices/CategorySlice'
+import { getCategoriesList } from '../../redux/services/CategoriesService'
 
 const Header = () => {
     const [activeCategory, setActiveCategory] = useState(413)
     const [isOpen, setIsOpen] = useState(false);
     const {items, loading} = useSelector(state => state.categories)
     const dispatch = useDispatch()
-
 
     const handleSidebarToggle = () => {
         setIsOpen(!isOpen);
@@ -46,16 +44,8 @@ const Header = () => {
         setOpen(false)
     }
 
-    
-
     useEffect(() => {
-        dispatch(setLoading(true))
-        axios.get('https://ecommerce.main-gate.appx.uz/dev/v1/category/list').then(function(response){
-            dispatch(setCategories(response.data.categories))
-            dispatch(setLoading(false))
-        }).catch(function(error){
-            console.log(error)
-        })
+        dispatch(getCategoriesList())
     }, [])
 
 

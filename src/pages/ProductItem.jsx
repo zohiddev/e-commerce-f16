@@ -9,12 +9,9 @@ const ProductItem = () => {
   const params = useParams()
   const dispatch = useDispatch()
 
-
   useEffect(() => {
     dispatch(getProductWithSlug(params.slug))
   }, [])
-
-  console.log(params)
 
   return (
     <div>

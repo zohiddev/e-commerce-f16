@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { getCategoriesList } from "../services/CategoriesService";
 
 
 const initialState = {
@@ -9,16 +10,19 @@ const initialState = {
 const CategorySlice = createSlice({
     name: 'category',
     initialState,
-    reducers:{
-        setCategories: (state, {_, payload}) => {
-            state.items = payload
+    extraReducers: {
+        [getCategoriesList.pending]: (state) => {
+            state.loading = true
         },
-        setLoading: (state, {_, payload}) => {
-            state.loading = payload
+        [getCategoriesList.fulfilled]: (state, action) => {
+            state.items = action.payload.categories
+            state.loading = false
+        },
+        [getCategoriesList.rejected]: (state, action) => {
+            state.loading = false
+            console.log(action.payload)
         }
     }
 })
-
-export const {setCategories, setLoading} = CategorySlice.actions
 
 export default CategorySlice.reducer

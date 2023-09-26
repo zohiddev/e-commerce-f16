@@ -10,6 +10,7 @@ import 'swiper/css/pagination';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import EventsService from '../../redux/services/EventsService';
+import { getProductOfDay } from '../../redux/services/ProductsService';
 
 function Mainswiper() {
   const {items, loading} = useSelector(state => state.events)
@@ -17,6 +18,7 @@ function Mainswiper() {
 
   useEffect(() => {
     dispatch(EventsService())
+    dispatch(getProductOfDay())
   }, [])
 
   return (
@@ -43,7 +45,7 @@ function Mainswiper() {
             {
               items.map((item) => (
                 <SwiperSlide>
-                  <img src={item.image} key={item.id} className='swiper-main__img' alt={item.title_uz} />
+                  <img src={item.image_oz} key={item.id} className='swiper-main__img' alt={item.title_oz} />
                 </SwiperSlide>
               ))
             }

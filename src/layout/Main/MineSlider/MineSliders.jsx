@@ -10,8 +10,8 @@ import MineSliderFive from './MineSliderFive'
 function MineSliders() {
   return (
     <>
-    <MineSlider />
-    {/* <MineSliderTwo /> */}
+    {/* <MineSlider /> */}
+    <MineSliderTwo />
     {/* <MineSliderThree /> */}
     {/* <MineSliderFour /> */}
     {/* <MineSliderFive /> */}

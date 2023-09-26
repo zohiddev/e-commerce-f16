@@ -1,8 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getProductsS } from '../services/ProductsService'
+import { getProductOfDay, getProductsS } from '../services/ProductsService'
 
 const initialState = {
     items: [],
+    productOfTheDay: [],
     loading: false
 }
 
@@ -15,13 +16,23 @@ const ProductsSlice = createSlice({
         },
 
         [getProductsS.fulfilled]: (state, action) => {
+            console.log(action.payload)
             state.items = action.payload.products
             state.loading = false
         },
         [getProductsS.rejected]: (state, action) => {
             state.loading = false
-            console.log(action.payload)
-        }
+        },
+        [getProductOfDay.pending]: (state, action) => {
+            state.loading = true
+        },
+        [getProductOfDay.fulfilled]: (state, action) => {
+            state.productOfTheDay = action.payload.products
+            state.loading = false
+        },
+        [getProductOfDay.rejected]: (state, action) => {
+            state.loading = false
+        },
     }
 })
 
